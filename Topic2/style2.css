@@ -1,0 +1,85 @@
+body{
+	
+	background-repeat: repeat-x;
+	margin:0;
+	padding:0;
+	width:100%;
+}
+.container{
+	
+	margin:auto;
+	width:960px;
+
+}
+.navbar{
+	background: #64D507;
+	margin-top:20px;
+	height:1px;
+}
+.top-header{
+	background:url('images/templatemo_header.jpg');
+	background-repeat:no-repeat;
+	margin-top:10px;
+	height:114px;
+}
+.left-header{
+	margin-left:15px;
+}
+.top.left-header{
+	font-family: Tahoma;
+	font-size: 35px;
+	color: #0000ff;
+}
+.bottom.left-header{
+	font-family:Tahoma;
+	font-style:italic;
+}
+.right-header{
+	margin-top:11px;
+}
+.top-icon.right-header a{
+	margin-left:15px;
+}
+.form-group{
+	background:url("images/templatemo_search.jpg");
+	width: 185px;
+	height: 36px;
+}
+#searchId{
+	border:none;
+	background:none;
+	width: 132px;
+	height: 21px;
+}
+#submitId{
+	border:none;
+	background: url('images/templatemo_botton.jpg');
+	background-repeat: no-repeat;
+	width: 35px;
+	height: 20px;
+	margin-top:7px;
+	margin-left:4px;
+
+}
+#Trangchu{
+	color:#ffffff;
+}
+#menu li a:hover{
+	color:#ffffff;
+}
+.panel.panel-default{
+	border:none;
+}
+.panel-heading{
+	background:none !important;
+	border:none;
+}
+.Type3Title{
+	font-family: Arial;
+	font-size: 20px;
+	color: #0895d6;
+	margin-left:5%;
+	border-radius:50%;
+	background:#EEEEEE
+
+}
