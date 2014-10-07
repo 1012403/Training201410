@@ -79,7 +79,12 @@ body{
 	font-size: 20px;
 	color: #0895d6;
 	margin-left:5%;
-	border-radius:50%;
-	background:#EEEEEE
+	
 
+}
+.Idea{
+	border-radius:50%;
+	background:#EEEEEE;
+	width:30px;
+	height:30px;
 }
