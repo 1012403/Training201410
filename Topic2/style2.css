@@ -79,12 +79,16 @@ body{
 	font-size: 20px;
 	color: #0895d6;
 	margin-left:5%;
-	
+	float: left;
 
 }
 .Idea{
 	border-radius:50%;
 	background:#EEEEEE;
-	width:30px;
-	height:30px;
+	width:40px;
+	height:40px;
+	float: left;
+	text-align: center;
+	line-height: 40px;
+	margin-left: 5px;
 }
