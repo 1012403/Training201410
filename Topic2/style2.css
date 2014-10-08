@@ -50,6 +50,8 @@ body{
 	background:none;
 	width: 132px;
 	height: 21px;
+	margin-top:7px;
+	margin-left:2px;
 }
 #submitId{
 	border:none;
@@ -79,28 +81,123 @@ body{
 	font-size: 20px;
 	color: #0895d6;
 	margin-left:5%;
-	
+	float: left;
 
 }
 .Idea{
 	border-radius:50%;
 	background:#EEEEEE;
-	width:100px;
-	height:100px;
+	width:55px;
+	height:55px;
+	float: left;
+	text-align: center;
+	line-height: 37px;
+	margin-left: 3px;
+
+	color:#0895d6;
+	font-size: 20px;
 }
 h3{
 	font-family: Tahoma;
+	font-size:19px;
 	font-weight:bold;
+	margin-top:3px;
+}
+h4{
+	margin-left:5px;
+	font-family: Tahoma;
+	font-weight:bold;
+	font-size:13px;
 }
 p{
 	font-family: Tahoma;
-	font-size: 13px;
+	font-size: 12px;
 	text-align: justify;
+	margin-bottom:5px
+
 
 }
-#line{
+.line{
 	background-image: url('images/templatemo_h_line.jpg');
 	background-repeat:repeat-x;
 	width: 100%;
 	height: 2px;
+}
+#Type5panel{
+	margin-top:-20px;
+}
+.imagegroup img{
+	margin-left:5px;
+	margin-top:10px;
+	height:80px;
+	width:80px
+}
+#line_v{
+	background-image: url('images/templatemo_v_line.jpg');
+	background-repeat:repeat-y;
+	width: 2px;
+	height: 260px;
+}
+.Type1{
+	margin-left: 20px;
+}
+#Type1panel{
+	background:url('images/templatemo_section_1_bottom.jpg');
+	background-repeat:no-repeat
+	;
+}
+#headingpanel1{
+	height:40px;
+	
+}
+#headingpanel2{
+	height:40px;
+}
+#headingpanel3{
+	height:85px;
+}
+#bodypanel1{
+	width:240px;
+}
+#toprow{
+	background:url('images/templatemo_section_1_top.jpg');
+	background-repeat:no-repeat;
+	background-position:0px -12px;
+}
+.color.green{
+	 border-left: solid #6fe550;
+	 border-left-width: 9px;
+	
+}
+.color.blue{
+	border-left: solid #009fff;
+	border-left-width: 9px;
+	
+}
+.color.red{
+	border-left: solid #ffc539;
+	border-left-width: 9px;
+}
+div.color p{
+	margin-left:6px;
+}
+.line.five{
+	background:url("images/templatemo_section_5.jpg");
+	height:10px;
+}
+#footer{
+	clear:right;
+	text-align:center;
+	padding:40px;
+	background-image:url('images/templatemo_footer_bg.jpg');
+	background-repeat:repeat-x;
+	padding-bottom:2px;
+	height:85px;
+}
+#footerPara{
+	color:#ffffff;
+	margin-top:-5px;
+}
+a{
+	color:#0000ff;
 }
