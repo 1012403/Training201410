@@ -20,7 +20,7 @@ body{
 	background:url('images/templatemo_header.jpg');
 	background-repeat:no-repeat;
 	margin-top:10px;
-	height:114px;
+	height:114px
 }
 .left-header{
 	margin-left:15px;
@@ -143,8 +143,10 @@ p{
 }
 #Type1panel{
 	background:url('images/templatemo_section_1_bottom.jpg');
-	background-repeat:no-repeat
-	;
+	background-repeat:no-repeat;
+}
+#Type1Title{
+	font-size: 13px;
 }
 #headingpanel1{
 	height:40px;

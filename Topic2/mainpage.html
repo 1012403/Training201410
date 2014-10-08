@@ -13,14 +13,14 @@
 		<title>[Result HTML] - Pham Thuong Hai abc</title>
 </head>
 <body>
-	<div id="header">
-		<div class="container">
-			<div class="row top-header">
-				<div class="left-header col-md-6 col-sm-5 col-xs-3">
+		<div id="header">
+			<div class="container">
+				<div class="row top-header">
+				<div class="left-header col-md-6 col-sm-5 col-xs-6">
 					<div class="top left-header">KTC</div>
 					<div class="bottom left-header">KTC Project team</div>
 				</div>
-				<div class="right-header col-md-4 col-md-push-3 col-sm-5 col-xs-7 col-xs-push-2">
+				<div class="right-header col-md-4 col-md-push-3 col-sm-5 col-xs-7">
 					<div class="top-icon right-header">
 						<a href="#"><img class="iconheader" src="images/templatemo_icon_1.jpg" alt="icon template 1" class="img-rounded"></a>
 						<a href="#"><img class="iconheader" src="images/templatemo_icon_2.jpg" alt="icon template 2" class="img-rounded"></a>
@@ -37,7 +37,8 @@
 				</div>
 			</div>
 		</div>
-		<nav class="navbar navbar-default navbar-static-top col-md-12" role="navigation">
+			
+		<nav class="navbar navbar-default navbar-static-top col-md-12 col-sm-12 hidden-xs visible-md visible-sm visible-lg" role="navigation">
 			<div class="container" id="menu">
 				<ul class="nav navbar-nav navbar-right" role="menu">
 					<li><a id="Trangchu"  href="#">Trang chủ</a></li>
@@ -49,23 +50,44 @@
 				</ul>
 			</div>
 		</nav>
-		<div class="dropdown col-xs-12">
-			<span class="glyphicon glyphicon-list"></span>
-		</div>
+
+		<nav class="navbar navbar-default navbar-static-top col-xs-12 hidden-sm hidden-lg hidden-md visible-xs" role="navigation">
+			<div class="container" id="menu">
+				<ul class="nav navbar-nav navbar-center" role="menu">
+					<li class="dropdown">
+						 <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+    						Show list
+    						<span class="caret"></span>
+  						</button>
+  						<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+						  	<li><a id="Trangchu"  href="#">Trang chủ</a></li>
+							<li><a  href="#">Item #1</a></li>
+							<li><a  href="#">Item #2</a></li>
+							<li><a  href="#">Item #3</a></li>
+							<li><a  href="#">Item #4</a></li>
+							<li><a  href="#">Liên hệ</a></li>
+						 </ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
 	</div>
-	<div id="content">
+
+
+		<div id="content">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-4 sidebar">
+				<div class="col-md-4 col-xs-4 col-sm-3 sidebar">
 					<div class="Type1">
 						<div class="panel panel-default" id="Type1panel">
 							<div class="panel-heading" id="headingpanel1">
 								<div class="row" id="toprow">
-									<div class="col-md-7">
+									<div class="col-md-7 col-xs-5 col-sm-6">
 										<h3>Kiểu 1</h3>
 									</div>
-									<div class="col-md-5 col-md-pull-1">
-										<span>Thử kiểu 1</span>
+									<div class="col-md-5 col-md-pull-1 col-xs-5 col-sm-6">
+										<span id="Type1Title">Thử kiểu 1</span>
 									</div>
 								</div>
 							</div>
@@ -99,7 +121,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-8 post">
+				<div class="col-md-8 col-sm-5 col-xs-6 post">
 					<div class="Type3">
 						<div class="panel panel-default">
 							<div class="panel-heading" id="headingpanel3">
@@ -175,6 +197,9 @@
 			</div>
 		</div>
 	</div>
+
+
+	
 	<div id="footer">
 		<p id="footerPara" style="text-align:center;">Copyright © 2012 <a href="http://furniture.bommerdesign.com/training-html/#">KhuyenTaiClub</a> | Designed by <a href="http://www.templatemo.com/">Free CSS Templates</a></p></div>
 </body>
