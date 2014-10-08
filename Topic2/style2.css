@@ -8,13 +8,16 @@ body{
 .container{
 	
 	margin:auto;
-	width:960px;
+	width:75%;
 
 }
 .navbar{
 	background: #64D507;
-	margin-top:20px;
-	height:1px;
+	margin-top:2px;
+
+}
+ul.navbar{
+	margin-left:350px;
 }
 .top-header{
 	background:url('images/templatemo_header.jpg');
@@ -40,7 +43,7 @@ body{
 .top-icon.right-header a{
 	margin-left:15px;
 }
-.form-group{
+.form-group.search{
 	background:url("images/templatemo_search.jpg");
 	width: 185px;
 	height: 36px;
@@ -101,7 +104,7 @@ h3{
 	font-family: Tahoma;
 	font-size:19px;
 	font-weight:bold;
-	margin-top:3px;
+	margin-top:8px;
 }
 h4{
 	margin-left:5px;
@@ -158,6 +161,9 @@ p{
 #headingpanel3{
 	height:85px;
 }
+#headingpanel4{
+	height:28px;
+}
 #bodypanel1{
 	width:240px;
 }
@@ -176,6 +182,7 @@ p{
 	border-left-width: 9px;
 	
 }
+
 .color.red{
 	border-left: solid #ffc539;
 	border-left-width: 9px;
@@ -202,4 +209,8 @@ div.color p{
 }
 a{
 	color:#0000ff;
+}
+.errorRequire{
+	visibility: hidden;
+	color: #ff0505;
 }
