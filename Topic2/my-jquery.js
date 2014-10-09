@@ -1,7 +1,7 @@
 $(document).ready(function(){
 		//Create a number range [1..100]
-		var numRand1 = Math.floor(Math.random()*11);
-		var numRand2 = Math.floor(Math.random()*11);
+		var numRand1 = Math.floor(Math.random()*101);
+		var numRand2 = Math.floor(Math.random()*101);
 		$("#num1").val(numRand1);
 		$("#num2").val(numRand2);
 
@@ -72,6 +72,11 @@ $(document).ready(function(){
 				return false;
 			}
 			
+		});
+
+		$("#ContactRef").click(function(){
+			window.location.href= "#formContact";
+			return false;
 		});
 		
 		
