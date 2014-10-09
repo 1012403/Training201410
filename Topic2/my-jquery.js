@@ -1,7 +1,7 @@
 $(document).ready(function(){
 		//Create a number range [1..100]
-		var numRand1 = Math.floor(Math.random()*101);
-		var numRand2 = Math.floor(Math.random()*101);
+		var numRand1 = Math.floor(Math.random()*11);
+		var numRand2 = Math.floor(Math.random()*11);
 		$("#num1").val(numRand1);
 		$("#num2").val(numRand2);
 
@@ -55,6 +55,15 @@ $(document).ready(function(){
 			removeFeedback();
 			var errors = validationForm();
 			if (errors == ""){
+				
+				var userobject = {
+					"name": $("#fullname").val(),
+					"company": $("#company").val(),
+					"email": $("#email").val(),
+					"message" : $("#message").val(),
+
+				};
+				alert(JSON.stringify(userobject, null, 4));
 				return true;
 			}
 			else{

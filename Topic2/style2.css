@@ -116,6 +116,7 @@ p{
 	font-family: Tahoma;
 	font-size: 12px;
 	text-align: justify;
+	margin-top:3px;
 	margin-bottom:5px
 
 
@@ -152,14 +153,15 @@ p{
 	font-size: 13px;
 }
 #headingpanel1{
-	height:40px;
+	height:31px;
 	
 }
+
 #headingpanel2{
 	height:40px;
 }
 #headingpanel3{
-	height:85px;
+	height:90px;
 }
 #headingpanel4{
 	height:28px;
@@ -215,4 +217,15 @@ a{
 }
 .errorSpan{
 	color: red;
+}
+#submitcontact{
+	background: black;
+	color:white;
+}
+.EmailContact{
+	background: black;
+	color: white;
+	border-radius: 5%;
+	height: 30px;
+	width:160px;
 }
