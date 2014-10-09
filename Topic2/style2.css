@@ -210,7 +210,9 @@ div.color p{
 a{
 	color:#0000ff;
 }
-.errorRequire{
+.errorFeedback{
 	visibility: hidden;
-	color: #ff0505;
+}
+.errorSpan{
+	color: red;
 }
