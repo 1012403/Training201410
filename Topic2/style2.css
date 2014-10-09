@@ -13,7 +13,6 @@ body{
 }
 .navbar{
 	background: #64D507;
-	margin-top:2px;
 
 }
 ul.navbar{
@@ -52,8 +51,8 @@ ul.navbar{
 	border:none;
 	background:none;
 	width: 132px;
-	height: 21px;
-	margin-top:7px;
+	height: 90%;
+	margin-top:2%;
 	margin-left:2px;
 }
 #submitId{
@@ -62,7 +61,7 @@ ul.navbar{
 	background-repeat: no-repeat;
 	width: 35px;
 	height: 20px;
-	margin-top:7px;
+
 	margin-left:4px;
 
 }
@@ -94,7 +93,7 @@ ul.navbar{
 	height:55px;
 	float: left;
 	text-align: center;
-	line-height: 37px;
+	line-height: 57px;
 	margin-left: 3px;
 
 	color:#0895d6;
@@ -167,7 +166,7 @@ p{
 	height:28px;
 }
 #bodypanel1{
-	width:240px;
+	width:85%;
 }
 #toprow{
 	background:url('images/templatemo_section_1_top.jpg');
