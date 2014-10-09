@@ -1,0 +1,17 @@
+/*
+.container{
+	background: red;
+}
+.type1{
+	background: gray;
+}
+*/
+.navbar{
+	ackground: url(images/templatemo_section_1_top.jpg) repeat-x;
+}
+li .active{
+	-background-color: red;
+}
+.active a{
+	-background-color: none;
+}
