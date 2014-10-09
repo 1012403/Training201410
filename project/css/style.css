@@ -12,25 +12,29 @@ background: url(../images/templatemo_bg.jpg) repeat-x;
 }
 #up-header {
 height: 115px;
-width: 980px;
+width: 100%
 margin: 0 auto;
-background: url(../images/templatemo_header.jpg) no-repeat;
 }
 #titleweb{
 float: left;
-padding-left: 45px;
-padding-top: 15px;
+margin-left: 15px;
+padding-bottom:22px;
 display: inline;
+background: url(../images/templatemo_header.jpg) no-repeat;
 }
 #titleweb h4{
+margin-left:30px;
+margin-top:20px;
 font-size:2.4em;
 color: blue;
 }
 #titleweb p{
+margin-left:30px;
 font-size:15px;
 font-style:italic;
 }
 #tinymenu{
+margin-right:30px;
 float: right;
 padding-top: 30px;
 display: inline;
@@ -49,7 +53,7 @@ margin-left: 17px;
 margin-top: 10px;
 border: none;
 }
-.btn{
+.butn{
 float:right;
 width: 35px;
 margin-top: 7px;
@@ -62,6 +66,7 @@ float: right;
 padding-right: 15px;
 }
 #navigation{
+margin-right:80px;
 text-align:center;
 line-height: 35px;
 }
@@ -71,7 +76,7 @@ line-height: 35px;
 display: inline;
 }
 #navigation li a{
-margin-top:-5px;
+margin-top:-8px;
 text-decoration: none;
 padding-right: 35px;
 color: black;
@@ -79,6 +84,9 @@ font-size:12px;
 }
 #navigation li a:hover{
 color: white;
+}
+#navigation .in li a:hover{
+color: green;
 }
 .navbar-default{
 background: transparent;
@@ -90,6 +98,9 @@ background:transparent;
 #navigation .navbar-default .navbar-nav  .active  a{
 color: white;
 background:transparent;
+}
+#navigation .in .active li a{
+color: green;
 }
 /****Content****/
 /***Sidebar***/
@@ -103,7 +114,7 @@ display:inline;
 #subsidebar1{
 }
 #titlebar{
-width:240;
+width:100%;
 height:33px;
 background: url(../images/templatemo_section_1_top.jpg) no-repeat;
 }
@@ -115,24 +126,25 @@ margin-top: 14px;
 margin-left: 14px;
 }
 #titlebar p{
-float:right;
-width:90px;
+float:left;
+width:60px;
 height:20px;
+margin-left:80px;
 margin-top: 16px;
 font-size:10px;
 }
 #sbcontent{
-height:274px;
-width:249;
+height:300px;
+width:100%;
 background: url(../images/templatemo_section_1_bottom.jpg) no-repeat;
 }
 #sbcontent p{
 float:left;
-width:220px;
+width:225px;
 margin-top:6px;
 margin-left:14px;
 margin-right:14px;
-margin-bottom:10px;
+margin-bottom:5px;
 font-size:13px;
 font-family: Tahoma;
 }
@@ -143,7 +155,6 @@ background: url(../images/templatemo_h_line.jpg) repeat-x;
 clear:both;
 }
 #subsidebar2{
-height:335px;
 margin-top:25px;
 margin-left:14px;
 margin-right:14px;
@@ -296,7 +307,7 @@ display:inline;
 /****Footer****/
 #footer{
 width: 100%;
-height:90px;
+height:88px;
 float:left;
 background: url(../images/templatemo_footer_bg.jpg) repeat-x;
 text-align:center;
@@ -311,12 +322,41 @@ text-decoration:underline;
 color:#0500E3;
 }
 
-
-
-
-
-
-
+/***CONTACT_FORM***/
+#contact-form{
+float:left;
+border-color:black;
+margin-left:5%;
+margin-bottom:5%;
+}
+.btn{
+color:white;
+background:#000000;
+}
+.inquiry span{
+color:green;
+}
+.input-group{
+width:90%;
+}
+.form-control.secure-number{
+float:left;
+line-height: 3%;
+width:17%;
+margin-right:3%;
+}
+.inquiry p{
+font-style:bold;
+margin-right:3%;
+margin-top:1%;
+float:left;
+}
+.last-one{
+margin-top:13%;
+}
+.warning{
+color: red;
+}
 
 
 

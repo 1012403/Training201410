@@ -29,44 +29,61 @@
 		<script type="text/javascript" src="source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
 		
 		<script type="text/javascript" src="js/bootstrap.js"></script>
-		<script type="text/javascript" src="js/pp.js"></script>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/my-jquery.js"></script>
 		
 	</head>
 	<body>
 		<div id="wrapper">
 			<div id="header" >
-				<div class="row" >
-					<div id="up-header" class="col-md-9 col-md-push-2">
-						<div id="titleweb" class="col-md-6">
-							<h4>KTC</h4>
-							<p>KTC Project Team</p>
-						</div>
-						<div id="tinymenu" class="col-md-3">
-							<a href="#"><img src="images/templatemo_icon_3.jpg" id="icon3"></a>
-							<a href="#"><img src="images/templatemo_icon_1.jpg" id="icon1"></a>
-							<a href="#"><img src="images/templatemo_icon_2.jpg" id="icon2"></a>							
-							<div id="search">
-								<form name="searchbox" method="" action="">
-									<input type="text" name="textbox" size="30" value="Nhập từ khóa" class="txt" onfocus="if(this.value=='Nhập từ khóa')this.value=''" onblur="this.value='Nhập từ khóa'"/>
-									<input type="submit" name="searchbtn" class="btn" value=""/>
-								</form>
+				<div class="container">
+					<div class="row" >
+						<div id="up-header" class="row">
+							<div id="titleweb" class="col-md-7 col-md-push-1">
+								<h4>KTC</h4>
+								<p>KTC Project Team</p>
 							</div>
-						</div>			
+							<div id="tinymenu" class="col-md-3 col-md-pull-1">
+								<a href="#"><img src="images/templatemo_icon_3.jpg" id="icon3"></a>
+								<a href="#"><img src="images/templatemo_icon_1.jpg" id="icon1"></a>
+								<a href="#"><img src="images/templatemo_icon_2.jpg" id="icon2"></a>							
+								<div id="search">
+									<form name="searchbox" method="" action="">
+										<input type="text" name="textbox" size="30" value="Nhập từ khóa" class="txt" onfocus="if(this.value=='Nhập từ khóa')this.value=''" onblur="this.value='Nhập từ khóa'"/>
+										<input type="submit" name="searchbtn" class="butn" value=""/>
+									</form>
+								</div>
+							</div>			
+						</div>
+					
+						<div id="navigation" >	
+							<nav class="navbar navbar-default" role="navigation">
+							  <div class="container-fluid">
+								<!-- Brand and toggle get grouped for better mobile display -->
+								<div class="navbar-header">
+								  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								  </button>
+								</div>
+
+								<!-- Collect the nav links, forms, and other content for toggling -->
+								<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+								  <ul class="nav navbar-nav navbar-right">
+									<li class="active"><a href="#">Trang chủ</a></li>
+									<li><a href="#">Item #1</a></li>
+									<li><a href="#">Item #2</a></li>
+									<li><a href="#">Item #3</a></li>
+									<li><a href="#">Item #4</a></li>
+									<li><a href="#">Liên hệ</a></li>
+								  </ul>
+								</div><!-- /.navbar-collapse -->
+							  </div><!-- /.container-fluid -->
+							</nav>
+						</div>
 					</div>
-				</div>
-				<div id="navigation" class="row">					
-					<nav class="navbar navbar-default col-md-pull-2" role="navigation">
-						<ul class="nav navbar-nav navbar-right">
-							<li class="active">
-								<a href="#">Trang chủ</a>
-							</li>
-							<li><a href="#">Item #1</a></li>
-							<li><a href="#">Item #2</a></li>
-							<li><a href="#">Item #3</a></li>
-							<li><a href="#">Item #4</a></li>
-							<li><a href="#">Liên hệ</a></li>
-						</ul>
-					</nav>
 				</div>
 			</div>
 			<div id="content">
@@ -149,7 +166,6 @@
 										<a class="fancybox" rel="group" href="images/templatemo_big_4.jpg"><img src="images/templatemo_thumb_4.jpg" alt="" /></a>
 										<a class="fancybox" rel="group" href="images/templatemo_big_5.jpg"><img src="images/templatemo_thumb_5.jpg" alt="" /></a>
 										<a class="fancybox" rel="group" href="images/templatemo_big_6.jpg"><img src="images/templatemo_thumb_6.jpg" alt="" /></a>
-										
 									</div>
 								</div>
 								<div class="borderline3"></div>
@@ -168,6 +184,57 @@
 			</div>
 			<div id="footer">
 				<p>Copyright © 2012 <a href="http://furniture.bommerdesign.com/training-html/?qry=Nh%E1%BA%ADp+t%E1%BB%AB+kh%C3%B3a&search=#">KhuyenTaiClub</a> | Designed by <a href="www.templatemo.com">Free CSS Templates</a></p>
+			</div>
+			<div id="contact-form">
+				<div class="container">
+					<div class="row">
+						<div class="inquiry col-md-6">
+							<h3><b>INQUIRY</b></h3>
+							<br>						
+							<form name="contact-form" action="" method="">
+								<h4>Full name <span>*</span></h4>
+								<div class="input-group">
+								  <input type="text" class="form-control fullname" placeholder="Enter your name" name="fullname">
+								</div>
+								<br>
+								<h4>Company <span>*</span></h4>
+								<div class="input-group">
+								  <input type="text" class="form-control company" placeholder="Where do you work?" name="company">
+								</div>
+								<br>
+								<h4>Email address <span>*</span></h4>
+								<div class="input-group">
+								  <input type="text" class="form-control email-address" placeholder="e.g info@envato.com" name="email-address">
+								</div>
+								<h4>Message <span>*</span></h4>
+								<div class="input-group">
+								  <input type="text" class="form-control message">
+								</div>
+								<h4>Security check</h4>
+								<input type="text" class="form-control secure-number a-code" name="a-code">
+								<p>+</p>
+								<input type="text" class="form-control secure-number b-code" name="b-code">
+								<p>=</p>
+								<input type="text" class="form-control secure-number code-secure" name="code-secure">
+								
+								<div class="input-group last-one">
+									<button id="sender" type="button" name="sender" class="btn btn-default">Send</button>
+								</div>
+							</form>
+						</div>
+						<div class="info-contact col-md-2">
+							<h3><b>CONTACT</b></h3>
+							<br>
+							<b>Jonathan Doe</b>
+							<p>Flinders St 35 23456 Melbourne Australia</p>
+							<br>
+							<b>E-Mail Contact:</b>
+							<form name="mail" action="" method="">
+								<button type="button" class="btn btn-default">spam@getthemes.net</button>
+							</form>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</body>
