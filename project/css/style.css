@@ -185,11 +185,10 @@ margin-left: 11px;
 }
 /*** Container ***/
 #container{
-margin-left:5px;
 margin-right:5px;
 margin-bottom:40px;
 float: left;
-
+padding-left:0px;
 display:inline;
 }
 #top{
