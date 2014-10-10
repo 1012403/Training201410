@@ -5,7 +5,7 @@ $(document).ready(function() {
 	$('.b-code').val(randnum); 
 	$('#sender').click(function(){
 		$('.warning').remove();
-		
+		 
 		if($('.fullname').val() === "")
 		{
 			$('.fullname').after("<div class=\"warning\">You have to fill this field!</div>");
