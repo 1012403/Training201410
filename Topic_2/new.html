@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name"viewport" content"width=device-width, initial-scale-1.0">
+	<title>Layout-Bootstrap</title>
+	<link href="css/bootstrap.css" rel="stylesheet" media="screen"></link>
+	<link href="css/my-style.css" rel="stylesheet" media="screen"></link>
+	<style type="text/css">
+		#header {
+    		min-height: 100px;
+    		padding: 0px 0;
+    		
+		}
+		#header .logo {
+    		line-height: 60px;
+    		
+    	}
+		#header .site_description {
+    		line-height: 60px;
+    		float:right;
+		}
+	</style>
+</head>
+<body>
+	<div class="container-fluid">
+		<div id="header">
+			<div class="container">
+        		<div class="logo col-xs-12 col-sm-12 col-md-8" style="background-color:red;">
+          			<a href="index.html">
+          				<img width="257" height="56" alt="" src="">
+          			</a>
+          			
+        		</div>
+        		<div class="login col-xs-12 col-sm-3 col-md-4 pull-right">
+          			<div class"header_toolbar">
+							<a href="#"><img src="images/templatemo_icon_3.jpg" id="icon2"></a>
+							<a href="#"><img src="images/templatemo_icon_2.jpg" id="icon1"></a>
+							<a href="#"><img src="images/templatemo_icon_1.jpg" id="icon3"></a>							
+							<div class="search">
+								<form name="searchbox" method="" action="">
+									<input type="text" name="textbox" size="30" title="Nhập từ khóa" value="Nhập từ khóa" class="textbox" onfocus="if(this.value=='Nhập từ khóa')this.value=''" onblur="this.value='Nhập từ khóa'"/>
+									<input type="submit" name="searchbtn" title="Tìm kiếm" class="button" value=""/>
+								</form>
+							</div>
+						</div>        			
+        		</div>
+      		</div>
+		</div>
+		<div class="clearfix"></div>
+		<div class="container navi">
+			<nav>
+				<ul class="nav navbar-nav navbar-deafault navbar-right">
+					<li class="active"><a href="#">Trang chủ</a></li>
+					<li><a href="#">Item#1</a></li>
+					<li><a href="#">Item#2</a></li>
+					<li><a href="#">Item#3</a></li>
+					<li><a href="#">Item#4</a></li>
+					<li><a href="#">Liên hệ</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="sidebar col-md-3">
+					<div class="list-group type1">
+						<div class="header_type1">
+							<h1>Kiểu 1</h1>
+							<span class="corner_title">Thử kiểu 1</span>
+						</div>
+						<div class="bottom_type1">
+							<p>Nulla enim nibh, consectetuer sed, vestibulum elementum, sagittis nec, diam.</p>
+							<p>Mauris blandit vehicula neque. Proin consectetuer. Donec venenatis. Cras urna metus, feugiat non, consectetuer quis, pretium quis, nunc.</p>
+							<p>Nullam pede purus, tempor a, imperdiet in, porttitor at, nulla. Aliquam elit risus, volutpat quis, mattis ac, elementum eget, mauris. In hac habitasse platea dictumst.</p>
+						</div>
+					</div>
+					<div class="horizontal_devider"></div>
+					<div class="list-group type2">
+						<h1 class="list-group-item-heading">Kiểu 2</h1>
+						<div class="green_border">
+							<h3>18 December 2024</h3>
+							<p>Pellen tesque dolor nulla, con gue vitae, frin gilla in, varius a, orci ma uris con.</p>
+						</div>
+						<div class="blue_border">
+							<h3>22 November 2024</h3>
+	                        <p>Proin vel libero id erat venen atis accu msan. Nunc blan dit orci sit amet risus.</p>
+						</div>
+						<div class="orange_border">
+							<h3>30 October 2024</h3>
+	                        <p>Duis pul vinar scele risque ante. Mor bit risti  que, risus quis congue pul vinar.</p>
+						</div>
+					</div>
+				</div>
+
+
+
+				<div class="content col-md-9">
+					<div class="row type3">
+						<h1>Kiểu 3</h1>
+	                    <span class="blue_title">To Creative <b>IDEA</b></span>
+	                	<p>This is a <a href="http://www.templatemo.com/" target="_parent">free CSS template</a> from TemplateMo.com. You may download, modify and apply this CSS layout for your websites. Credit goes to <a href="http://www.addfullsize.com/" target="_blank">full size</a> for jQuery Full Size Image Plugin. Nunc blandit orci sit amet risus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut iaculis lacinia purus.
+	                	</p>
+	                    <p>Aliquam magna. Phasellus id felis.Donec mollis aliquet ligula. Maecenas adipiscing elementum ipsum. Pellentesque vitae magna. Sed nec est. Suspendisse a nibh tristique justo rhoncus volutpat. Suspendisse vitae neque eget ante tristique vestibulum. </p>
+					</div>
+					
+					<div class="horizontal_devider"></div>
+					
+					<div class="row type4">
+						<h1>Kiểu 4</h1>
+						<div class="col-md-6">                   	
+							<img src="./images/templatemo_img_1.jpg" alt="Empty image">
+							<h2>Creative Graphic Design</h2>
+							<p>Aliquam sagittis molestie sapien. Nulla tellus risus, tincidunt vitae, sagittis vel, interdum at, erat. Duis vitae velit. Ut ultricies. Fusce sollicitudin nisl.</p>                   
+						</div>
+					
+						<div class="col-md-6">                   	
+							<img src="./images/templatemo_img_2.jpg" alt="Empty image">
+							<h2>Special Web Design</h2>
+							<p>Phasellus tincidunt, tortor lacinia blandit commodo, nunc augue mattis eros, ut convallis est augue vel.</p>                   
+						</div>
+					</div>
+					
+					<div class="trans_devider"></div>
+										
+					<div class="row type5">
+						<h1>Kiểu 5</h1>
+						<div class="col-md-6">
+							<h1>Photo Gallery</h1>
+							<div class="photo_list">
+								<div class="row">
+									<div class="col-sm-2 col-md-4">
+										<a id="example2" href="./images/templatemo_big_1.jpg"><img class="left" alt="example2" src="./images/templatemo_thumb_1.jpg" /></a>
+									</div>
+									<div class="col-sm-2 col-md-4">
+										<a id="example2" href="./images/templatemo_big_2.jpg"><img class="mid" alt="example2" src="./images/templatemo_thumb_2.jpg" /></a>
+									</div>
+									<div class="col-sm-2 col-md-4">
+										<a id="example2" href="./images/templatemo_big_3.jpg"><img class="right" alt="example2" src="./images/templatemo_thumb_3.jpg" /></a>
+									</div>
+								</div>
+								<div class="photo_divider hidden-xs"> </div>
+
+								<div class="row">
+									<div class="col-sm-2 col-md-4">
+										<a id="example2" href="./images/templatemo_big_4.jpg"><img class="left" alt="example2" src="./images/templatemo_thumb_4.jpg" /></a>
+									</div>
+									<div class="col-sm-2 col-md-4">
+										<a id="example2" href="./images/templatemo_big_5.jpg"><img class="mid" alt="example2" src="./images/templatemo_thumb_5.jpg" /></a>
+									</div>
+									<div class="col-sm-2 col-md-4">
+										<a id="example2" href="./images/templatemo_big_6.jpg"><img class="right" alt="example2" src="./images/templatemo_thumb_6.jpg" /></a>
+									</div>
+								</div>								
+							</div>
+	                   </div>
+					   <div class="vertical_divider"></div>
+					   <div class="col-md-6">
+	                    	<h1>Contact Info.</h1>
+	                        <p>Pellentesque odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas</p><p>
+							</p><p>111/222 Lorem ipsum dolor sit,consectetuer adipiscing elit. Nunc quis sem nec, 10100</p>
+							<p>Tel : 010-100-0100</p>
+							<p>Fax : 020-200-0200</p>
+							<p>Email : info@yourcompany.com</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="clearfix"></div>
+
+		<footer class="footer">
+			Copyright © 2012 <a href="http://furniture.bommerdesign.com/training-html/#">KhuyenTaiClub</a> | Designed by <a href="http://www.templatemo.com/" target="_parent">Free CSS Templates</a>
+		</footer>
+	</div>
+</body>
+</html>
