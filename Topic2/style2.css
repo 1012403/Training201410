@@ -150,6 +150,7 @@ p{
 }
 #Type1Title{
 	font-size: 13px;
+	margin-left:-25%;
 }
 #headingpanel1{
 	height:31px;
@@ -171,6 +172,8 @@ p{
 }
 #bodypanel1 p{
 	width:220px;
+	text-align:left;
+	margin-left:-10px;
 }
 #bodypanel2 p{
 	width: 80%;
@@ -240,8 +243,4 @@ a{
 	border-radius: 5%;
 	height: 30px;
 	width:160px;
-}
-.scrollable {
-    height: 80px; /* or any value */
-    overflow-y: auto;
 }
