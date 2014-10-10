@@ -52,8 +52,8 @@ ul.navbar{
 	background:none;
 	width: 132px;
 	height: 90%;
-	margin-top:2%;
-	margin-left:2px;
+	margin-top:1%;
+	margin-left:6%;
 }
 #submitId{
 	border:none;
@@ -61,8 +61,8 @@ ul.navbar{
 	background-repeat: no-repeat;
 	width: 35px;
 	height: 20px;
-
-	margin-left:4px;
+	margin-top:3%;
+	margin-left:2%;
 
 }
 #Trangchu{
@@ -166,7 +166,14 @@ p{
 	height:28px;
 }
 #bodypanel1{
-	width:85%;
+	width:78px;
+	height:235px;
+}
+#bodypanel1 p{
+	width:220px;
+}
+#bodypanel2 p{
+	width: 80%;
 }
 #toprow{
 	background:url('images/templatemo_section_1_top.jpg');
@@ -217,6 +224,12 @@ a{
 .errorSpan{
 	color: red;
 }
+.okFeedback{
+	visibility: hidden;
+}
+.okSpan{
+	color: blue;
+}
 #submitcontact{
 	background: black;
 	color:white;
@@ -227,4 +240,8 @@ a{
 	border-radius: 5%;
 	height: 30px;
 	width:160px;
+}
+.scrollable {
+    height: 80px; /* or any value */
+    overflow-y: auto;
 }

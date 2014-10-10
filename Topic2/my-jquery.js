@@ -16,6 +16,9 @@ $(document).ready(function(){
 			if ($("#email").val() == ""){
 				errorField.push("email");
 			}
+			else if (validateEmail() == false){
+				errorField.push("email");
+			}
 			if ($("#message").val() == ""){
 				errorField.push("message");
 			}
@@ -28,14 +31,36 @@ $(document).ready(function(){
 			return errorField;
 
 		}
+
+
+		function validateEmail() {
+		    var x = $("#email").val();
+		    var atpos = x.indexOf("@");
+		    var dotpos = x.lastIndexOf(".");
+		    if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+		       $("#emailFeedback").html("Check email format");
+		        return false;
+		    }
+		    else{
+		    	$("#emailFeedback").html("Email is required");
+		    	return true;	
+		    }
+		    
+		}
 		function provideFeedback(incomingErrors){
 			for (var i=0; i< incomingErrors.length; ++i){
 				$("#" + incomingErrors[i] + "Feedback").removeClass("errorFeedback");
+				$("#" + incomingErrors[i] + "OKFeedback").addClass("okFeedback");
 			}
 		}
 		function removeFeedback(){
 			$('.errorSpan').each(function(){
-				$(this).addClass("errorFeedback");
+			$(this).addClass("errorFeedback");
+				//$(this).html("Valid");
+			
+			});
+			$('.okSpan').each(function(){
+				$(this).removeClass("okFeedback");
 			});
 		}
 
@@ -75,9 +100,18 @@ $(document).ready(function(){
 		});
 
 		$("#ContactRef").click(function(){
+			
 			window.location.href= "#formContact";
 			return false;
+
 		});
+
+		$("#num3").keyup(function () { 
+   			if (this.value != this.value.replace(/[^0-9\.]/g, '')) {
+       			this.value = this.value.replace(/[^0-9\.]/g, '');
+  			  }
+		});
+		
 		
 		
 });

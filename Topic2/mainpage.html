@@ -5,8 +5,8 @@
 		<link rel="stylesheet" type="text/css" href="bootstrap-3.2.0-dist/css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="bootstrap-3.2.0-dist/css/bootstrap-theme.css">
 		<link rel="stylesheet" type="text/css" href="style2.css">
-		<script type="text/javascript" src="bootstrap-3.2.0-dist/js/bootstrap.js"></script>
 		<script type="text/javascript" src='jquery-1.8.3.min.js'></script>
+		<script type="text/javascript" src="bootstrap-3.2.0-dist/js/bootstrap.js"></script>
 		<script type="text/javascript" src="highslide/highslide.js"></script>
 		<link rel="stylesheet" type="text/css" href="highslide/highslide.css" />
 		<script type="text/javascript" src="my-jquery.js"></script>
@@ -16,86 +16,98 @@
 		<div id="header">
 			<div class="container">
 				<div class="row top-header">
-				<div class="left-header col-md-6 col-sm-5 col-xs-6">
-					<div class="top left-header">KTC</div>
-					<div class="bottom left-header">KTC Project team</div>
+				<div class="left-header col-xs-3 col-sm-5 col-md-6 ">
+					<div class="row top left-header">KTC</div>
+					<div class="row bottom left-header">KTC Project team</div>
 				</div>
-				<div class="right-header col-md-4 col-md-push-3 col-sm-5 col-xs-7">
-					<div class="top-icon right-header">
+				<div class="right-header col-xs-9 col-sm-5 col-md-4 col-md-push-3">
+					<div class="row">
+						<div class="top-icon right-header">
 						<a href="#"><img class="iconheader" src="images/templatemo_icon_1.jpg" alt="icon template 1" class="img-rounded"></a>
 						<a href="#"><img class="iconheader" src="images/templatemo_icon_2.jpg" alt="icon template 2" class="img-rounded"></a>
 						<a href="#"><img class="iconheader" src="images/templatemo_icon_3.jpg" alt="icon template 3" class="img-rounded"></a>
+						</div>
 					</div>
-					<div class="bottom-form right-header">
-						<form class="form-inline" role="form">
-							<div class="form-group search">
-								<input  id="searchId" class="form-control" type="text" value="Nhập từ khóa" name="searchBlock">
-								<input  id="submitId" class="form-control" type="submit" value="">
-							</div>
-						</form>
-					</div>
+			
+						<div class="bottom-form right-header">
+							<form class="form-inline" role="form">
+								<div class="form-group search">
+									<div class="row">
+										<input  id="searchId" class="form-control col-xs-6" type="text" value="Nhập từ khóa" name="searchBlock">
+										<input  id="submitId" class="form-control col-xs-6" type="submit" value="">
+									</div>
+									
+								</div>
+							</form>
+						</div>
+				
+					
 				</div>
 			</div>
 		</div>
-			
-		<nav class="navbar navbar-default navbar-static-top col-md-12" role="navigation">
-			<div class="container" id="menu">
-				<div class="row">
-					<div class="navbar-header">
-				      	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav_bar">
-					        <span class="sr-only">Toggle navigation</span>
-					        <span class="icon-bar"></span>
-					        <span class="icon-bar"></span>
-					        <span class="icon-bar"></span>
-				      </button>
-				      <a class="navbar-brand" href="#">Menu</a>
-  					</div>
-  					<div id="nav_bar" class="collapse navbar-collapse">
-  						<ul class="nav navbar-nav navbar" role="menu">
-							<li><a id="Trangchu"  href="#">Trang chủ</a></li>
-							<li><a  href="#">Item #1</a></li>
-							<li><a  href="#">Item #2</a></li>
-							<li><a  href="#">Item #3</a></li>
-							<li><a  href="#" id="ContactRef">Contact</a></li>
-							<li><a  href="#">Liên hệ</a></li>
-						</ul>
-  					</div>
-				</div>
-				
-			</div>
-		</nav>
 
+		<nav class="navbar navbar-default" role="navigation">
+ 			 <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+   				 <div class="navbar-header">
+      				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu">
+       			 		<span class="sr-only">Toggle navigation</span>
+       					<span class="icon-bar"></span>
+        				<span class="icon-bar"></span>
+        				<span class="icon-bar"></span>
+      				</button>
+    			</div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+	    		<div class="collapse navbar-collapse" id="menu">
+	     			<ul class="nav navbar-nav navbar-right">
+	      				<li><a id="Trangchu"  href="#">Trang chủ</a></li>
+						<li><a  href="#">Item #1</a></li>
+						<li><a  href="#">Item #2</a></li>
+						<li><a  href="#">Item #3</a></li>
+						<li><a  href="#" id="ContactRef">Contact</a></li>
+						<li><a  href="#">Liên hệ</a></li>
+	     			</ul>
+	    		</div><!-- /.navbar-collapse -->
+  			</div><!-- /.container-fluid -->
+		</nav>
 	</div>
 		<div id="content">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-4 col-xs-4 col-sm-3 sidebar">
-					<div class="Type1">
-						<div class="panel panel-default" id="Type1panel">
-							<div class="panel-heading" id="headingpanel1">
-								<div class="row" id="toprow">
-									<div class="col-md-7 col-xs-5 col-sm-6">
-										<h3>Kiểu 1</h3>
-									</div>
-									<div class="col-md-5 col-md-pull-1 col-xs-5 col-sm-6">
-										<span id="Type1Title">Thử kiểu 1</span>
+				<div class="col-xs-6 col-sm-5 col-md-4 sidebar">
+					<div class="row">
+						<div class="Type1">
+							<div class="panel panel-default" id="Type1panel">
+								<div class="panel-heading" id="headingpanel1">
+									<div class="row" id="toprow">
+										<div class="col-xs-5 col-sm-6 col-md-7">
+											<h3>Kiểu 1</h3>
+										</div>
+										<div class="col-xs-5 col-sm-6 col-md-5 col-md-pull-1 ">
+											<span id="Type1Title">Thử kiểu 1</span>
+										</div>
 									</div>
 								</div>
-							</div>
-							<div class="panel-body" id="bodypanel1">
-								<p>Nulla enim nibh, consectetuer sed, vestibulum elementum, sagittis nec, diam.</p>
-								<p>Mauris blandit vehicula neque. Proin consectetuer. Donec venenatis. Cras urna metus, feugiat non, consectetuer quis, pretium quis, nunc.</p>
-								<p>Nullam pede purus, tempor a, imperdiet in, porttitor at, nulla. Aliquam elit risus, volutpat quis, mattis ac, elementum eget, mauris. In hac habitasse platea dictumst.</p>
+								<div class="panel-body" id="bodypanel1">
+									<p>Nulla enim nibh, consectetuer sed, vestibulum elementum, sagittis nec, diam.</p>
+									<p>Mauris blandit vehicula neque. Proin consectetuer. Donec venenatis. Cras urna metus, feugiat non, consectetuer quis, pretium quis, nunc.</p>
+									<p>Nullam pede purus, tempor a, imperdiet in, porttitor at, nulla. Aliquam elit risus, volutpat quis, mattis ac, elementum eget, mauris. In hac habitasse platea dictumst.</p>
+								</div>
 							</div>
 						</div>
 					</div>
-					<div class="line"></div>
-					<div class="Type2">
+					
+					
+						<div class="line" style="width:258px;"></div>
+				
+					<div class="row">
+						<div class="Type2">
 						<div class="panel panel-default">
 							<div class="panel-heading" id="headingpanel2">
 								<h3>Kiểu 2</h3>
 							</div>
-							<div class="panel-body">
+							<div class="panel-body" id="bodypanel2">
 								<div class="color green">
 									<h4>18 December 2024</h4>
 									<p>Pellen tesque dolor nulla, con gue vitae, frin gilla in, varius a, orci ma uris con.</p>
@@ -111,8 +123,10 @@
 							</div>
 						</div>
 					</div>
+					</div>
+					
 				</div>
-				<div class="col-md-8 col-sm-5 col-xs-6 post">
+				<div class="col-xs-6 col-sm-6 col-md-8 col-sm-6 post" style="margin-left:-25px;">
 					<div class="Type3">
 						<div class="panel panel-default">
 							<div class="panel-heading" id="headingpanel3">
@@ -142,6 +156,7 @@
 											<h3>Creative Graphic Design</h3>
 											<p>Aliquam sagittis molestie sapien. Nulla tellus risus, tincidunt vitae, sagittis vel, interdum at, erat. Duis vitae velit. Ut ultricies. Fusce sollicitudin nisl.</p>
 										</div>
+										
 										<div class="col-md-6 rightpanel">
 											<img src="images/templatemo_img_2.jpg" alt="Image 2">
 											<h3>Special Web Design</h3>
@@ -172,8 +187,8 @@
 												</div>
 											
 										</div>
-										<div class="line col-md-1" id="line_v" style="margin-left:-20px;"></div>
-										<div class="col-md-5 rightpanel" style="margin-left:-25px;">
+										<div class="line col-md-1 hidden-sm hidden-xs" id="line_v" style="margin-left:-20px;"></div>
+										<div class="col-md-4 rightpanel" style="margin-left:-25px;">
 											<h3>Contact Info</h3>
 											<p>Pellentesque odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas</p>
 											<p>111/222 Lorem ipsum dolor sit,consectetuer adipiscing elit. Nunc quis sem nec, 10100</p>
@@ -195,15 +210,18 @@
 								<h3>Full Name *</h3>	
 								<input  id="fullname" class="form-control" placeholder="Enter your name" val="" type="text">
 								<span class="errorFeedback errorSpan" id="fullnameFeedback">Fullname is require</span>
+								<span class="okFeedback okSpan" id="fullnameOKFeedback">Valid</span>
 								<h3>Company *</h3>	
 								<input  id="company" class="form-control" placeholder="Where do you work?" val="" type="text">
 								<span class="errorFeedback errorSpan" id="companyFeedback">Company is required</span>
+								<span class="okFeedback okSpan" id="companyOKFeedback">Valid</span>
 								<h3>Email addresss *</h3>	
-								<input  id="email" class="form-control" placeholder="e.g info@envato.com" val="" type="Email">
+								<input  id="email" class="form-control" placeholder="e.g info@envato.com" val="" type="text">
 								<span class="errorFeedback errorSpan" id="emailFeedback">Email is required</span>
-								<h3>Message *</h3>
-								<textarea  id="message" rows="4" cols="50" class="form-control" type="text" maxlength="200" val=""></textarea>
+								<span class="okFeedback okSpan" id="emailOKFeedback">Valid</span>
+								<textarea  id="message" rows="4" cols="50" class="form-control" type="text" minlength="50" maxlength="200" val=""></textarea>								
 								<span class="errorFeedback errorSpan" id="messageFeedback">Message is required</span>
+								<span class="okFeedback okSpan" id="messageOKFeedback">Valid</span>
 								<h3>Security check</h3>
 								<div class="row" style="margin-left:2px;">
 									<input  id="num1" class="col-md-1" type="text">
@@ -212,6 +230,7 @@
 									<h3 class="col-md-1" style="margin-top:-2px;">=</h3>
 									<input   id="num3" class="col-md-1" type="text">
 									<span class="errorFeedback errorSpan col-md-1" id="numberFeedback">Calculate again!</span>
+									<span class="okFeedback okSpan" id="numberOKFeedback">Valid</span>
 								</div>
 								<input id="submitcontact" value="Send" type="submit">
 							</div>
@@ -232,6 +251,9 @@
 										<br>
 										<h3>Email Contact</h3>
 										<div class="EmailContact">spam@rockettheme.net</div>
+										<h3>Message *</h3>
+										
+										
 									</div>
 								</div>
 							</div>
