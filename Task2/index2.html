@@ -7,51 +7,61 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0 ">
 	<!-- Using CDN -->
 	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<!--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> -->
 	<link rel="stylesheet" type="text/css" href="highslide/highslide.css" />
-    <link rel="stylesheet" href="bootstrapvalidator-dist-0.5.2/dist/css/bootstrapValidator.css"/>
+    <!--<link rel="stylesheet" href="bootstrapvalidator-dist-0.5.2/dist/css/bootstrapValidator.css"/> -->
+	
+	<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="dist/css/bootstrapValidator.css"/>
 
-    <script type="text/javascript" src="bootstrapvalidator-dist-0.5.2/dist/js/bootstrapValidator.js"></script>
-
-	<!-- Optional: Include the jQuery library -->
+    <script type="text/javascript" src="vendor/jquery/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="dist/js/bootstrapValidator.js"></script>
+	<!-- 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<!-- Optional: Incorporate the Bootstrap JavaScript plugins -->
+	Optional: Incorporate the Bootstrap JavaScript plugins
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src='jquery-1.8.3.min.js'></script>
+	-->
+	<!--<script type="text/javascript" src='jquery-1.8.3.min.js'></script> -->
 	<script type="text/javascript" src="highslide/highslide.js"></script>
 	
 	<link rel="stylesheet" type="text/css" href="style2.css" >
 	
+        <style>
+            .success{color: blue;},
+            .error {color: red;}
+        </style>
+	
 </head>
 <body >
 	<div class="row">
-		<div class="col-md-10 col-md-offset-1" style="height: 115px;">
-			<div class="col-md-9">
-				<div class="col-md-11 col-md-offset-1" style="margin-top: -10px; background: url('resource/images/header.jpg'); height: 115px;">
+		<div class="col-md-10 col-md-offset-1 col-xs-12" style="height: 115px;">
+			<div class="col-md-9 col-xs-8">
+				<div class="col-md-11 col-md-offset-1" style="margin-top: -10px; background: url('resource/images/header.jpg') no-repeat; height: 115px;">
 					<div class="title1"> KTC </div>
 					<div class="title2"> KTC Project Team </div>
 				</div>
 			</div>
-			<div class="col-md-2" style="height: 100%;">
+			<div class="col-md-3 col-xs-4" style="height: 100%;">
 				<div style="margin: 20px 0;">
 					<div class="row">
-						<div class="col-md-10" style="height: 30px;">
-							<div class="col-md-4">
+						<div class="col-md-10 col-xs-12" style="height: 30px;">
+							<div class="col-md-4 col-xs-4">
 								<img src="resource/images/icon1.jpg" style="cursor: pointer;">
 							</div>
-							<div class="col-md-4">
+							<div class="col-md-4 col-xs-4">
 								<img src="resource/images/icon2.jpg" style="cursor: pointer;">
 							</div>
-							<div class="col-md-4">
+							<div class="col-md-4 col-xs-4">
 								<img src="resource/images/icon3.jpg" style="cursor: pointer;">
 							</div>
 						</div>
 					</div>
-					<div class="row" style="background: url('resource/images/search.jpg');height: 36px;height: 36px;" >
-							<div class="col-md-8">
+					<div class="row" style="background: url('resource/images/search.jpg') no-repeat;height: 36px;height: 36px;" >
+							<div class="col-md-8 col-xs-8">
 								<input value="Nhập từ khóa" class="field" title="Nhập từ khóa" onblur="clearText(this)" type="text" style="background-none; width:100%; margin-top: 5px;border: none;background: none;">	
 							</div>		
-							<div class="col-md-3" style="margin-top: 7px;width: 35px;border: none;height: 22px;">	
+							<div class="col-md-3 col-md-pull-3 col-xs-8 col-xs-pull-2" style="margin-top: 7px;width: 35px;border: none;height: 22px;">	
 								<input name="search" value="" alt="Search" class="button" title="Tìm kiếm" type="submit" style="background: url('resource/images/search_btn.jpg') no-repeat;width: 35px;height: 22px;border: none;float: left;width: 35px;height: 22px;">
 							</div>			
 					</div>
@@ -64,7 +74,7 @@
 	<div class="container">
 		<!-- Menu -->
 		<div class="row" style="margin-top: -7px;">
-				<div class="col-md-8 col-md-offset-4">
+				<div class="col-md-8 col-md-offset-3 col-xs-12">
 					<div class="menu">
 						<ul>
 							<li><a href="#">Liên hệ</a></li> 
@@ -166,8 +176,8 @@
 							</div>
 
 							<div class="row">
-								<div class="col-md-6 "> 
-									<div class="col-md-11 "> 
+								<div class="col-md-6 col-xs-7"> 
+									<div class="col-md-11 col-xs-11 "> 
 									<h1>Photo Gallery</h1>
 									<div class="gallery">
 										<a href="resource/images/type5_1big.jpg" class="image5"><img src="resource/images/type5_1.jpg" title="----"></a>
@@ -178,9 +188,9 @@
 										<a href="resource/images/type5_6big.jpg" class="image5"><img src="resource/images/type5_6.jpg" title="----"></a>
 									</div>
 									</div>
-									<div class="v_line"></div>
+									<div class="v_line" class="col-md-1 col-xs-1 "></div>
 								</div>
-			                    <div class="col-md-6 "> 
+			                    <div class="col-md-6 col-xs-5"> 
 			                    	<h1>Contact Info.</h1>
 			                        <p>Pellentesque odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas</p><p>
 									</p><p>111/222 Lorem ipsum dolor sit,consectetuer adipiscing elit. Nunc quis sem nec, 10100</p>
@@ -199,7 +209,7 @@
 			<div class="row">
 					<div class="col-md-8 col-md-offset-1" >
 						<h1>INQUIRY</h1>
-						<form id="contact_form" role="form" >
+						<form id="contact_form" method="post" role="form" >
 						  <div class="form-group">
 						    <label >Full name <span style="color:blue">*</span></label>
 						    <input  type="text" class="form-control" name="username"  placeholder="Enter your name">
@@ -242,7 +252,7 @@
 
 						<div class="col-md-2">
 						  <div class="form-group">
-						     <input type="text" class="form-control" id="result">
+						     <input type="text" class="form-control" id="result" name="result">
 						  </div>
 						</div>
 							
@@ -254,7 +264,7 @@
 
 						<div class="col-md-12">
 							<div class="form-group">
-						    	  <button id="sendbtn" type="submit" class="btn btn-default" onclick="myFunction()" style="background-color:blue; color:white;">Send</button>
+						    	  <button id="sendbtn" type="submit" class="btn btn-default" " style="background-color:blue; color:white;">Send</button>
 						  </div>
 						</div>
 					</form>
@@ -283,33 +293,13 @@
 								
 			</div>
 		</div>
-
+<!--
 		<script src="assets/js/jquery-1.7.1.min.js"></script> 
 
 		<script src="assets/js/jquery.validate.js"></script> 
+		-->
 
 		<script src="script.js"></script> 
-		<script>
-			function myFunction() {
-			    var  message,x, number1, numner2;
-			    message = document.getElementById("errormessage");
-   				message.innerHTML = "";
-			    number1 = document.getElementById("number1").value;
-			    number2 = document.getElementById("number2").value;
-			    message.innerHTML = "";
-			    x = document.getElementById("result").value;
-			    try { 
-			        if(x == "") throw "is Empty";
-			        if(isNaN(x)) throw "not a number";
-			        if(x != number1+number2) throw " not equal";
-			         if(x == number1+number2) throw " right answer";
-			        
-			    }
-			    catch(err) {
-			        message.innerHTML = "Input " + err;
-			    }
-			}
-		</script>
 
 
 			<script type="text/javascript">
@@ -318,12 +308,106 @@
 					return false;
 				});	
 		</script>
-
+		
+		
+		
+		
+		<!--
+		<script>
+		var form = $("#contact_form");
+		$("#sendbtn").click(function() {
+        if(form.valid() == true ) { // here you check if validation returned true or false 
+            alert('submitted');
+        }
+    })
+		</script>
+		-->
+		
 		<script type="text/javascript"> 
   				document.getElementById("number1").setAttribute('value',Math.floor((Math.random() * 100) + 1));
   				document.getElementById("number2").setAttribute('value',Math.floor((Math.random() * 100) + 1));
 
 		</script>
+		
+		<script type="text/javascript">
+$(document).ready(function() {
+    $('#contact_form').bootstrapValidator({
+        message: 'This value is not valid',
+        fields: {
+            username: {
+                message: 'The Name is not valid',
+                validators: {
+                    notEmpty: {
+                        message: 'The Name is required and can\'t be empty'
+                    },
+					/*
+                    stringLength: {
+                        min: 6,
+                        max: 30,
+                        message: 'The username must be more than 6 and less than 30 characters long'
+                    },*/
+                    regexp: {
+                        regexp: /^[a-zA-Z0-9_\.]+$/,
+                        message: 'The Name can only consist of alphabetical, number, dot and underscore'
+                    },
+                }
+            },
+			
+			 company: {
+                message: 'The company is not valid',
+                validators: {
+                    notEmpty: {
+                        message: 'The company is required and can\'t be empty'
+                    },
+                }
+            },
+			
+			
+            email: {
+                validators: {
+                    notEmpty: {
+                        message: 'The email address is required and can\'t be empty'
+                    },
+                    emailAddress: {
+                        message: 'The input is not a valid email address'
+                    }
+                }
+            },
 
+			message: {
+                message: 'The message is not valid',
+                validators: {
+                    notEmpty: {
+                        message: 'The message is required and can\'t be empty'
+                    },
+					 stringLength: {
+                        min: 50,
+                        max: 200,
+                        message: 'The message must be more than 50 and less than 200 characters long'
+                    },
+                }
+            },
+			
+			
+            result: {
+                validators: {
+                    callback: {
+                        message: 'Wrong answer',
+                        callback: function(value, validator) {
+                            var item1 = document.getElementById("number1").value,item2 = document.getElementById("number2").value,sum = parseInt(item1)+parseInt(item2);
+                            return value == sum;
+                        }
+                    }
+                }
+            } 
+        }
+		
+    });
+});
+</script>
+
+<div class="alert alert-success">
+Well done! You successfully read this important alert message.
+</div>
 </body>
 </html>
