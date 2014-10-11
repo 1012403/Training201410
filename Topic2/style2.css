@@ -154,6 +154,7 @@ p{
 #Type1Title{
 	font-size: 13px;
 	margin-left:-25%;
+	float: left;
 }
 #headingpanel1{
 	height:31px;
@@ -185,6 +186,9 @@ p{
 	background:url('images/templatemo_section_1_top.jpg');
 	background-repeat:no-repeat;
 	background-position:0px -12px;
+}
+#toprow h3{
+	float: left;
 }
 .color.green{
 	 border-left: solid #6fe550;
