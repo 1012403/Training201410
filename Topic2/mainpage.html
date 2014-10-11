@@ -16,7 +16,7 @@
 		<div id="header">
 			<div class="container">
 				<div class="row top-header">
-				<div class="left-header col-xs-3 col-sm-5 col-md-6 ">
+				<div class="left-header col-sm-5 col-md-6 ">
 					<div class="row top left-header">KTC</div>
 					<div class="row bottom left-header">KTC Project team</div>
 				</div>
@@ -75,7 +75,7 @@
 		<div id="content">
 		<div class="container">
 			<div class="row">
-				<div class="col-xs-6 col-sm-5 col-md-4 sidebar">
+				<div class=" col-sm-5 col-md-4 sidebar">
 					<div class="row">
 						<div class="Type1">
 							<div class="panel panel-default" id="Type1panel">
@@ -126,7 +126,7 @@
 					</div>
 					
 				</div>
-				<div class="col-xs-6 col-sm-7 col-md-8  post" style="margin-left:-25px;">
+				<div class="col-sm-7 col-md-8  post" style="margin-left:-25px;">
 					<div class="Type3">
 						<div class="panel panel-default">
 							<div class="panel-heading" id="headingpanel3">
@@ -219,20 +219,26 @@
 								<input  id="email" class="form-control" placeholder="e.g info@envato.com" val="" type="text">
 								<span class="errorFeedback errorSpan" id="emailFeedback">Email is required</span>
 								<span class="okFeedback okSpan" id="emailOKFeedback">Valid</span>
-								<textarea  id="message" rows="4" cols="50" class="form-control" type="text" minlength="50" maxlength="200" val=""></textarea>								
+								<h3>Message *</h3>		
+								<textarea  id="message" rows="4" cols="50" class="form-control" type="text" minlength="50" maxlength="200" val=""></textarea>	
+
 								<span class="errorFeedback errorSpan" id="messageFeedback">Message is required</span>
 								<span class="okFeedback okSpan" id="messageOKFeedback">Valid</span>
 								<h3>Security check</h3>
-								<div class="row" style="margin-left:2px;">
-									<input  id="num1" class="col-md-1" type="text">
-									<h3 class="col-md-1" style="margin-top:-2px;">+</h3>
-									<input  id="num2" class="col-md-1" type="text">
-									<h3 class="col-md-1" style="margin-top:-2px;">=</h3>
-									<input   id="num3" class="col-md-1" type="text">
+								<div>
+									<div class="input-group" style="margin-left:2px;">
+										<input  id="num1"class="form-control" type="text">
+										 <span class="input-group-addon">+</span>
+										<input  id="num2" class="form-control" type="text">
+										<span class="input-group-addon">=</span>
+										<input   id="num3" class="form-control"type="text">
+									</div>
 									<span class="errorFeedback errorSpan col-md-1" id="numberFeedback">Calculate again!</span>
 									<span class="okFeedback okSpan" id="numberOKFeedback">Valid</span>
+									<input id="submitcontact" class="form-control" value="Send" type="submit">
 								</div>
-								<input id="submitcontact" value="Send" type="submit">
+								
+								
 							</div>
 					</form>
 				</div>
@@ -251,7 +257,7 @@
 										<br>
 										<h3>Email Contact</h3>
 										<div class="EmailContact">spam@rockettheme.net</div>
-										<h3>Message *</h3>
+									
 										
 										
 									</div>

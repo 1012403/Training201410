@@ -37,10 +37,13 @@ ul.navbar{
 	font-style:italic;
 }
 .right-header{
-	margin-top:11px;
+	margin-top:25px;
 }
 .top-icon.right-header a{
 	margin-left:15px;
+}
+.top-icon{
+	margin-bottom:-20px;
 }
 .form-group.search{
 	background:url("images/templatemo_search.jpg");
