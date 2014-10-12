@@ -8,16 +8,15 @@ font-family: tahoma;
 /***HEADER***/
 #header {
 width: 100%;
-background: url(../images/templatemo_bg.jpg) repeat-x;
+/**background: url(../images/templatemo_bg.jpg) repeat-x;*/
 }
 #up-header {
-height: 115px;
-width: 100%
+width: 100%;
 margin: 0 auto;
 }
 #titleweb{
 float: left;
-margin-left: 15px;
+margin-right: 15px;
 padding-bottom:22px;
 display: inline;
 background: url(../images/templatemo_header.jpg) no-repeat;
@@ -34,7 +33,7 @@ font-size:15px;
 font-style:italic;
 }
 #tinymenu{
-margin-right:30px;
+margin-right:50px;
 float: right;
 padding-top: 30px;
 display: inline;
@@ -66,9 +65,9 @@ float: right;
 padding-right: 15px;
 }
 #navigation{
-margin-right:80px;
 text-align:center;
 line-height: 35px;
+background:#63D406;
 }
 #navigation ul{
 }
@@ -76,7 +75,6 @@ line-height: 35px;
 display: inline;
 }
 #navigation li a{
-margin-top:-8px;
 text-decoration: none;
 padding-right: 35px;
 color: black;
@@ -85,12 +83,14 @@ font-size:12px;
 #navigation li a:hover{
 color: white;
 }
-#navigation .in li a:hover{
-color: green;
+.container-fluid{
+margin-right:0px;
 }
 .navbar-default{
+margin-bottom:0px;
 background: transparent;
 border:none;
+width:100%;
 }
 .navbar-default .navbar-nav  .active  a:hover{
 background:transparent;
@@ -99,13 +99,10 @@ background:transparent;
 color: white;
 background:transparent;
 }
-#navigation .in .active li a{
-color: green;
-}
 /****Content****/
 /***Sidebar***/
 #content{
-margin: 0 auto;
+margin-top:20px;
 }
 #sidebar{
 float: left;
@@ -356,7 +353,10 @@ margin-top:13%;
 .warning{
 color: red;
 }
-
+#contact-form .container {
+border-color: black;
+border: 2px;
+}
 
 
 
