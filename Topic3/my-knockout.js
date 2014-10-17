@@ -159,6 +159,10 @@ $(document).ready(function(){
    							return item.Date().toLowerCase().indexOf(day) >= 0;	
    				});
    		},this);
+
+   		this.totalRecords = ko.computed(function(){
+			return self.todos().length;
+   		});
    	}
 
 	ko.applyBindings(new ToDoViewModel());
