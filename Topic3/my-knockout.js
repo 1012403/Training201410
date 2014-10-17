@@ -55,6 +55,8 @@ $(document).ready(function(){
 		
 		];
 
+			this.isAddnew = false;
+
 		//Add to list
 		this.todos = ko.observableArray([
 			new ToDoItem(myTasks[0]),
@@ -66,14 +68,18 @@ $(document).ready(function(){
 
 		//add new Task
 		this.addList = function(){
-			var object = {
-				Activity:"",Date: new Date(),From:0, To:0, Status:'', Note:''
-			};
-			var newItem = new ToDoItem(object);
-      		self.todos.push(newItem);
-       		self.selectedItem(newItem);	
+			if (!self.selectedItem()){
+					var object = {
+					Activity:"",Date: new Date(),From:0, To:0, Status:'', Note:''
+				};
+				var newItem = new ToDoItem(object);
+	      		self.todos.push(newItem);
+	       		self.selectedItem(newItem);	
+	       		self.isAddnew = true;
+			}
+			
 		}
-		 
+	
 		//Change to Edit format 
 		this.editList = function(task) {
        		 self.selectedItem(task);
@@ -101,12 +107,21 @@ $(document).ready(function(){
 
    	    //Discharge change
    	    this.cancleList = function() {
-	        self.selectedItem().Activity.reset();
+   	    	  if (self.isAddnew == true){
+	        	self.todos.remove(self.selectedItem());
+	        	self.isAddnew = false; 
+	        }
+	        else{
+	        	self.selectedItem().Activity.reset();
 	        self.selectedItem().From.reset();
 	        self.selectedItem().To.reset();
 	        self.selectedItem().Status.reset();
-	        self.selectedItem().Note.reset();
+	        self.selectedItem().Note.reset();	
+	        }
+	        
+	      
 	        self.selectedItem(null);
+	        
    		 };
 
    		//Change the view template base on the selected item

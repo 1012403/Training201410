@@ -53,12 +53,12 @@
 					<script id="editTmpl" type ="text/html">
 						<tr class="active">
 							<td data-bind="text: $index()+1"></td>
-							<td><input data-bind="value: Activity"/></td>
-							<td><input data-bind="value: Date"/></td>
-							<td><input data-bind="value: From"/></td>
-							<td><input data-bind="value: To"/></td>
-							<td><input data-bind="value: Status"/></td>
-							<td><input data-bind="value: Note"/></td>
+							<td><input class="editid" data-bind="value: Activity"/></td>
+							<td><input class="editid" data-bind="value: Date"/></td>
+							<td><input class="editid" data-bind="value: From"/></td>
+							<td><input class="editid" data-bind="value: To"/></td>
+							<td><input class="editid" data-bind="value: Status"/></td>
+							<td><input class="editid" data-bind="value: Note"/></td>
 							<td><a href="#" data-bind="click: $root.saveList">Save</a><span> | </span><a href="#" data-bind="click: $root.cancleList">Cancle</a></td>         
 						</tr>	
 					</script>
