@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+	<head>
+		<meta content="text/html"; charset="UTF-8">
+		<title> Knockout.js</title>
+		<link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+		<link rel="stylesheet" href="css/style.css" type="text/css">
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/knockout.js"></script>
+		
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+	</head>
+	<body>
+		<div class="wrapper row">
+			<div class="todo-list col-md-2">
+				<div class="big-title">MY TO-DO LIST</div>
+				<div class="small-title">To-dos of <span>TODAY</span></div>
+
+				<div class="task" data-bind="foreach: ListToday">
+					<div class="line">
+						<b data-bind="text: from"></b><b>h: </b><p data-bind="text: activity"></p>
+					</div>
+				</div>
+			</div>
+
+			<div class="shedule-tab col-md-8 container-fluid">
+				<div class="header">
+					<b class="title" data-bind="text: total">Total (100)</b>
+					<div class="searchbox">
+						<form action="searchbox">
+
+							<input data-bind="value: filter, valueUpdate: 'afterkeydown'" class="txt" />
+							<button name="button" class="btn btn-default btn-responsive">Search</button>
+						</form>
+					</div>
+				</div>
+
+				<div class="content table-responsive">
+					<table class="table">
+					    <thead>
+					    	<tr>
+					        	<th>No.</th><th>Activity</th><th>Date</th><th>From(h)</th><th>To(h)</th><th>Status(h)</th><th>Notes</th><th>Action</th>
+					    	</tr>
+						</thead>
+					    <!-- Todo: Generate table body -->
+					    <tbody data-bind="template: { name: templateToUse, foreach: filterTask}">
+					    	
+					    </tbody>		   
+					</table>
+					<button name="button" class="btn btn-default btn-responsive" data-bind="enable: !(adding()), click: addAct ">Add new</button>
+						<script id="editTmpl" type ="text/html">
+							<tr>
+								<td data-bind="text: $index()+1"></td>
+								<td><input data-bind="value: activity"/></td>
+								<td><input data-bind="value: date"/></td>
+								<td><input data-bind="value: from"/></td>
+								<td><input data-bind="value: to"/></td>
+								<td><input data-bind="value: status"/></td>
+								<td><input data-bind="value: notes"/></td>
+								<td><a href="#" data-bind="click: $root.save">Save</a> | <a href="#" data-bind="click: $root.cancel">Cancel</a></td>
+							</tr>
+						</script>
+
+						<script id="itemTmpl" type="text/html">
+							<tr>
+								<td data-bind="text: $index()+1"></td>
+								<td data-bind="text: activity"></td>
+								<td data-bind="text: date"></td>
+								<td data-bind="text: from"></td>
+								<td data-bind="text: to"></td>
+								<td data-bind="text: status"></td>
+								<td data-bind="text: notes"></td>
+								<td><a href="#" data-bind="click: $root.edit">Edit</a><span> | </span><a href="#" data-bind="click: $root.removeAct">Delete</a></td>
+							</tr>
+						</script>
+					<script type="text/javascript" src="js/my-knockout.js"></script>
+				</div>
+			</div>
+		</div>
+	</body>

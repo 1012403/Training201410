@@ -1,0 +1,134 @@
+*{margin: 0;padding: 0;}
+body{
+margin: 0 auto;
+font-family: tahoma;
+}
+
+.shedule-tab{
+	float: left;
+	padding-left: 0px;
+	padding-right: 0px;
+	border-left-width: 4px;
+	border-left-color:#22B14C;
+	border-left-style: solid;
+}
+.header{
+	float: left;
+	width: 100%;
+	margin-left: 10px;
+}
+.title{
+	float: left;
+}
+.searchbox{
+	float: right;
+}
+
+.content{
+	float: left;
+	margin-left: 10px;
+}	
+th{
+	padding-right: 60px;
+}
+.content input{
+	width: 100px;
+}
+.header {
+	margin-top: 15px;
+	margin-bottom: 10px;
+	float: left;
+	border-bottom-width: 2px;
+	border-bottom-color:#91D8A6;
+	border-bottom-style: solid;
+	padding-bottom: 11px;
+	margin-left: 0px;
+}
+.line{
+	padding-left: 10px;
+	width: 100%;
+	float: left;	
+	background: #E6E6E6;
+}
+.task {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 90%;
+}
+.task b{
+	float: left;
+	font-size: 15px;
+}
+.task p{
+	float: left;
+	margin-left: 8px;
+	font-size: 15px;
+}
+.big-title{
+	margin-top: 15px;
+	padding-bottom: 15px;
+	text-align: center;
+	font-size: 20px;
+	color: #22B14C;
+	border-bottom-width: 2px;
+	border-bottom-color:#91D8A6;
+	border-bottom-style: solid;
+}
+.small-title{
+	margin-top: 20px;
+	margin-bottom: 15px;
+	text-align: center;
+	font-size: 15px;
+}
+.todo-list{
+	padding-right: 0px;
+	padding-left: 0px;
+	
+}
+.small-title span{
+	color: #22B14C;
+}
+.wrapper{
+	margin-left: 0px;
+	margin-right: 0px;
+}
+.title{
+	padding-left: 20px;
+	font-size: 20px;
+}
+.btn{
+	float: right;
+
+	margin-left: 15px;
+}
+.txt{
+	margin-right: 15px;
+	padding-top: 10px;
+}
+/***HEADER***/
+
+/****Content****/
+/***Sidebar***/
+
+/****Footer****/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
