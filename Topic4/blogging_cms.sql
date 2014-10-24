@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 22, 2014 at 04:58 PM
+-- Generation Time: Oct 24, 2014 at 05:06 PM
 -- Server version: 5.6.20
 -- PHP Version: 5.5.15
 
@@ -45,7 +45,18 @@ CREATE TABLE IF NOT EXISTS `posts` (
   `post_content` text COLLATE utf8_unicode_ci NOT NULL,
   `post_time` datetime NOT NULL,
   `user_post` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=8 ;
+
+--
+-- Dumping data for table `posts`
+--
+
+INSERT INTO `posts` (`post_id`, `user_id`, `post_content`, `post_time`, `user_post`) VALUES
+(3, 34, 'Ä‘Ã´i(trÆ°Ì€ trÆ°Æ¡Ì€ng hoÌ£p Ä‘ÄƒÌ£t biÃªÌ£t nÃªÌu coÌ). Theo tiÌ€nh hiÌ€nh cfs cho thÃ¢Ìy trung biÌ€nh mÃ´Ìƒi ngaÌ€y coÌ khoaÌ‰ng 10 lÆ¡Ì€i toÌ‰ tiÌ€nh, thiÌ€ chiÌ‰ trong voÌ€ng 6 tuÃ¢Ì€n Ä‘aÌƒ... CoÌ€n laÌ£i 1 sÃ´Ì laÌ€ FA, Ä‘Æ°Æ¡ng nhiÃªn con sÃ´Ì naÌ€ y ko thÃªÌ‰ naÌ€o chiÌnh xaÌc, viÌ€ coÌ thÃªÌ‰ nhiu cfs gÆ°Ì‰i ', '2014-10-24 20:11:19', 34),
+(4, 34, 'cfs gÆ°Ì‰i cho cuÌ€ng 1 ng vaÌ€ ngÆ°Æ¡Ì£c laÌ£i, hoÄƒÌ£c chiÌ‰ laÌ€ nhÆ°Ìƒng cfs mang tiÌnh chÃ¢Ìt troll. TrÃªn Ä‘Ã¢y laÌ€ mÃ´Ì£t sÃ´Ì tiÌnh toaÌn ko khoa hoÌ£c cuÌ‰ a em ', '2014-10-24 20:14:55', 34),
+(5, 34, 's gÆ°Ì‰i cho cuÌ€ng 1 ng vaÌ€ ngÆ°Æ¡Ì£c laÌ£i, hoÄƒÌ£c chiÌ‰ laÌ€ nhÆ°Ìƒng cfs mang tiÌnh chÃ¢Ìt troll. TrÃªn Ä‘Ã¢y laÌ€ mÃ´Ì£t sÃ´Ì tiÌnh toaÌn ko khoa h', '2014-10-24 21:09:58', 34),
+(6, 34, ' 1 ng vaÌ€ ngÆ°Æ¡Ì£c laÌ£i, hoÄƒÌ£c chiÌ‰ laÌ€ nhÆ°Ìƒng cfs mang tiÌnh chÃ¢Ìt troll. TrÃªn Ä‘Ã¢y laÌ€ mÃ´Ì£t sÃ´Ì tiÌnh toaÌn ko khoa hoÌ£c cuÌ‰ a em ', '2014-10-24 21:10:37', 34),
+(7, 34, 'h, thiÌ€ chiÌ‰ trong voÌ€ng 6 tuÃ¢Ì€n Ä‘aÌƒ... CoÌ€n laÌ£i 1 sÃ´Ì laÌ€ FA, Ä‘Æ°Æ¡ng nhiÃªn con sÃ´Ì naÌ€ y ko thÃªÌ‰ naÌ€o chiÌnh xaÌc, viÌ€ coÌ thÃªÌ‰ nhiu cfs', '2014-10-24 21:49:17', 34);
 
 -- --------------------------------------------------------
 
@@ -57,17 +68,17 @@ CREATE TABLE IF NOT EXISTS `users` (
 `user_id` int(11) NOT NULL,
   `username` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `email` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
-  `password` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `password` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
   `active` varchar(60) COLLATE utf8_unicode_ci DEFAULT NULL,
   `registration_date` datetime NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=35 ;
 
 --
 -- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`user_id`, `username`, `email`, `password`, `active`, `registration_date`) VALUES
-(5, 'khoahoang', 'khoahoang06@gmail.com', '8cb2237d0679ca88db64', 'b74ebdb56b0636e614efd60d6cc2196d', '2014-10-22 21:22:09');
+(34, 'khoahoang', 'khoahoang06@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', NULL, '2014-10-23 19:39:11');
 
 --
 -- Indexes for dumped tables
@@ -83,7 +94,7 @@ ALTER TABLE `comments`
 -- Indexes for table `posts`
 --
 ALTER TABLE `posts`
- ADD PRIMARY KEY (`post_id`), ADD KEY `post_id` (`post_id`), ADD KEY `user_id` (`user_id`);
+ ADD PRIMARY KEY (`post_id`), ADD KEY `post_id` (`post_id`), ADD KEY `user_id` (`user_id`), ADD KEY `user_post` (`user_post`);
 
 --
 -- Indexes for table `users`
@@ -104,12 +115,12 @@ MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=35;
 --
 -- Constraints for dumped tables
 --
@@ -124,7 +135,8 @@ ADD CONSTRAINT `comments_ibfk_1` FOREIGN KEY (`post_id`) REFERENCES `posts` (`po
 -- Constraints for table `posts`
 --
 ALTER TABLE `posts`
-ADD CONSTRAINT `posts_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`);
+ADD CONSTRAINT `posts_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`),
+ADD CONSTRAINT `posts_ibfk_2` FOREIGN KEY (`user_post`) REFERENCES `users` (`user_id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
