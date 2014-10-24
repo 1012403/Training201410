@@ -6,14 +6,12 @@ body{
 
 	
 }
-.header{
+.logo{
+	padding-top: 4px;
+	padding-left: 50px;
 	background: #37D7E2;
 	width: 100%;
-	margin-left: 0px;
-	margin-right: 0px;
-}
-.logo{
-	padding-left: 0px;	
+	height: 40px;
 }
 .logo span{
 	color: white;
@@ -28,31 +26,13 @@ body{
 }
 .content {
 	width: 50%;
-	float: left;
-}
-.post-area{
-	float: left;
-	width: 100%
-}
-#new-post{
-	float: left;
 }
 .posts {
-	float: left;
 	margin-top:20px;
 	border-width:  1px;
 	border-color: #E5E5E5;
 	border-style: solid;
 	padding: 5px;
-}
-.posts .row{
-	margin-left: 0px;
-	margin-right: 0px;
-}
-.posts input{
-	float: left;
-	margin-top: 7px;
-	margin-bottom: 5px;
 }
 .userpost {
 	float: left;
@@ -61,23 +41,15 @@ body{
 	float: right;
 }
 .post-content{
-	margin-top: 4px;
-	float: left;
+	margin-top:10px;
 	background: #FFFFFF;
+	padding-top: 5px;
 	padding-left: 7px;
 	padding-right: 7px;
 	padding-bottom: 7px;
-	width: 100%
 }
 .comments{
-	float: left;
 	margin-top: 7px; 
-}
-.comment{
-	margin-top: 7px;
-}
-.comment{
-	float: left;
 }
 .user-comment{
 	float: left;
@@ -91,25 +63,11 @@ body{
 	width: 100%;
 }
 .well{
-	margin-bottom: 0px;
+	margin-top: 30px;
 }
 .input-group{
 	margin-left: 30px;
 }
 button{
 	margin-left: 30px;
-}
-.menu{
-	float: right;
-}
-.menu a{
-	font-size: 15px;
-	color: white;
-	font-weight: bold;
-}
-.menu .nav li a:hover{
-	background: #31C6CE;
-}
-#poston{
-	float: right;
 }

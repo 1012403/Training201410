@@ -21,7 +21,7 @@
 						$password = $_POST['password'];
 					if(empty($_POST['passwordconfirm']))
 						$errors[] = "passwordconfirm";
-					if($_POST['password'] != $_POST['password'])
+					if($_POST['password'] != $_POST['passwordconfirm'])
 						$errors[] = "dangling";
 
 					if(empty($errors))
@@ -43,8 +43,8 @@
 							{
 								$body = "Cảm ơn bạn đã đăng ký tài khoản tại FAbook. 
                         Xin vui lòng click vào đường link bên dưới để kích hoạt tài khoản \n\n ";
-                        		$body.= BASE_URL . "admin/activate.php?x=".urlencode($email)."&y={$a}";
-								if(mail($_POST['email'],'Kích hoạt tài khoản tại FAbook',$body,'FROM: localhost'))
+                        		$body.= BASE_URL . "/admin/activate.php?x=".urlencode($email)."&y={$a}";
+								if(mail_to($_POST['email'],'Kích hoạt tài khoản tại FAbook',$body))
 								{
 									echo "<p>Tài khoản đăng kí thành công.
 									Một email có chứa đường link kích hoạt tài khoản đã gửi tới mail của bạn.
