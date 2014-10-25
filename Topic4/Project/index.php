@@ -22,9 +22,8 @@
 								</div>";
 					echo "<div class=\"post-time col-md-4\">".$post['post_time']."</div>";
 					echo "<div class=\"post-content\">".$post['post_content']."</div>";
-					echo "			</div>
-								</div>";
-					echo "<input type=\"text\" class=\"form-control ".$post['post_id'].\" placeholder=\"Viết lời bình luận\">";
+					echo "	</div>";
+					echo "<input type=\"text\" class=\"form-control\" postvalue = \"".$post['post_id']."\" placeholder=\"Viết lời bình luận\"></div>";
 				}
 
 				/*<div class="comments">

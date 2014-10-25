@@ -38,6 +38,7 @@ body{
 	float: left;
 }
 .posts {
+	width: 100%;
 	float: left;
 	margin-top:20px;
 	border-width:  1px;
@@ -50,6 +51,7 @@ body{
 	margin-right: 0px;
 }
 .posts input{
+	width: 100%;
 	float: left;
 	margin-top: 7px;
 	margin-bottom: 5px;
