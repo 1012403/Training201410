@@ -4,13 +4,14 @@
 		<div class="content col-md-offset-3 ">
 			<div class="post-area">
 				<h4>Cập nhật trạng thái</h4>
-				<textarea name="" id="post-content" cols="105" rows="6"></textarea>
+				<textarea name="" id="post-content" cols="105" rows="3"></textarea>
 				<button type="button" id="poston" class="btn btn-default" >Đăng bài</button>
 			</div>
 			<?php 
+
 				$q = "SELECT user1.user_id,user2.user_id,user1.username usn1,user2.username usn2,post_content,post_time,post_id
 				FROM users user1, users user2,posts 
-				WHERE posts.user_id = user1.user_id AND posts.user_post = user2.user_id ORDER BY post_time DESC";
+				WHERE posts.user_id = user1.user_id AND posts.user_post = user2.user_id AND user1.username = '{$_GET['username']}' ORDER BY post_time DESC";
 				$r = mysql_query($q)or die("Query {$query} </br> MySQL Error:" . mysql_error($dbc));;
 				//$num =  mysql_fetch_array($r,MYSQL_NUM);
 				while($post = mysql_fetch_assoc($r))
@@ -47,12 +48,8 @@
 
 					echo "<input type=\"text\" class=\"form-control comment\" postvalue = \"".$post['post_id']."\" placeholder=\"Viết lời bình luận\"></div>";
 				}
-				echo "</div>
-						</div>"?>
-						<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-						<script type="text/javascript" src="js/readmore.min.js"></script>
-						<script>
-							$('.post-content').readmore({maxHeight: 40});
-						</script>
-						
-							</body>
+					echo "</div>
+							</div>
+								</body>";
+			?>
+			

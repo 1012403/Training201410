@@ -16,10 +16,11 @@
 	list($post_id) = mysql_fetch_array($r2,MYSQL_NUM);
 	//echo $_POST['username'];
 ?>
+
 <?php echo "<div class=\"posts well well-lg\">
 	<div class=\"row\">
 		<div class=\"userpost col-md-8\">
-			<a href=\"#\"><b>".$_POST['username']." </b></a>
+			<a href=\"userpage.php?username=".$_POST['username']."\"><b>".$_POST['username']." </b></a>
 		</div>
 		<div class=\"post-time col-md-4\">
 			".date ("d M Y, h:i:s A", mktime())."
@@ -28,4 +29,4 @@
 			". $_POST['content']."
 		</div>
 	</div>"?>
-	<?php echo "<input type=\"text\" class=\"form-control\" postvalue = \"".$post_id."\" placeholder=\"Viết lời bình luận\"></div></div>" ?>
+	<?php echo "<input type=\"text\" class=\"form-control comment\" postvalue = \"".$post_id."\" placeholder=\"Viết lời bình luận\"></div></div>" ?>

@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <head>
 	<meta content="text/html"; charset="UTF-8">
+
+	<link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+	<link rel="stylesheet" href="css/style.css" type="text/css">
 	<title> FAbook</title>
 </head>
 <body>
@@ -14,7 +17,8 @@
 					<a href="#"><b>Thi chó đốm</b></a>
 				</div>
 				<div class="content-comment">
-					la la l al al la l l la la al 
+					<article>
+					<p>la la l al al la l l la la al Skateboard artisan bicycle rights next level vinyl cardigan beard twee, farm-to-table truffaut. Shoreditch freegan cliche thundercats, bushwick VHS intelligentsia selfies ethnic try-hard before they sold out. Marfa terry richardson hella, seitan odd future pug butcher. Wes anderson tousled YOLO cardigan. Typewriter high life carles, artisan gentrify messenger bag single-origin coffee truffaut thundercats cray 90's pour-over seitan. Banksy 8-bit organic, salvia gentrify stumptown wayfarers. Godard echo park before they sold out chambray, skateboard twee mcsweeney's synth hella.</p></article>
 				</div>
 				<div class="comment-time">
 					11:10 pm 21/10/2014
@@ -33,4 +37,9 @@
 			</div>
 		</div>
 	</div>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script type="text/javascript" src="js/readmore.min.js"></script>
+						<script>
+							$('article').readmore({maxHeight: 10});
+						</script>
 </body>

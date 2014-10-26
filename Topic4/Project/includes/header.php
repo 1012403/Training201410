@@ -17,11 +17,15 @@
 			</div>
 			<div class="menu col-md-4 ">
 				<?php if(isset($_SESSION['username'])) 
-				echo "<ul class=\"nav nav-pills\">
-						<li><a href=\"#\">Trang chủ</a></li>
-						<li><a id=\"username\" href=\"#\">".$_SESSION['username']."</a></li>
+				{
+					echo "<ul class=\"nav nav-pills\">
+						<li><a href=\"index.php\">Trang chủ</a></li>
+						<li><a id=\"username\" href=\"userpage.php?username=";
+					echo $_SESSION['username'];
+					echo "\">".$_SESSION['username']."</a></li>
 						<li><a href=\"logout.php\">Đăng xuất</a></li>
 					  </ul>";
+				}
 					  else
 				echo "<ul class=\"nav nav-pills\">
 						<li><a href=\"login.php\">Đăng nhập</a></li>

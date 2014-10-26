@@ -16,7 +16,7 @@
 
 <div class="comment well well-sm">
 	<div class="user-comment">
-		<a href="#"><b><?php echo $_POST['username']?></b></a>
+		<?php echo "<a href=\"userpage.php?username=".$_POST['username']."\"><b>". $_POST['username']."</b></a>"?>
 	</div>
 	<div class="content-comment">
 		<?php echo $_POST['content']?>
