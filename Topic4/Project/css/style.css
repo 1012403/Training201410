@@ -122,3 +122,13 @@ li {
 ul {
 	padding-left: 0px;
 }
+
+.list-comments li{ display:none;
+}
+.loadMore {
+    color:green;
+    cursor:pointer;
+}
+.loadMore:hover {
+    color:black;
+}

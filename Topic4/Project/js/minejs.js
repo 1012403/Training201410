@@ -47,13 +47,43 @@ $(document).ready(function() {
 			});
 		}
 	});
-	$('.list-comments li:lt(3)').show();
-   /* $('#loadMore').click(function () {
-        $('#myList li:lt(10)').show();
-    });
-    $('#showLess').click(function () {
-        $('#myList li').not(':lt(3)').hide();
+
+	// $(".loadMore").click(function(e) {
+	// 	var url,data2;
+	// 	var postid = $(this).attr("postvalue");
+	// 	url = "showallcomments.php";
+	// 	data2 = { "post_id" : postid};
+	// 	var abs = this;
+	// 	$(data).insertBefore(abs);
+	// });
+	//$('.list-comments li:lt(5)').show();
+   /* $('.loadMore').click(function () {
+        $('.list-comments li:lt(10)').show();
+
     });*/
+
+    $('.posts').each(function(index){
+		$('.posts').find('ul').attr('id', 'listCmt_' + index);
+		/*$('#listCmt_' + index + 'li:lt(5)').show();
+		$('#listCmt_'+ index).find('.loadMore').attr('id', 'loadMore_' + index);
+		$('#loadMore_' + index).click(function(){
+			$('#listCmt_'+ index + ' li').css('display','block');
+		});*/
+	});		
+    // $('#showLess').click(function () {
+    //     $('#myList li').not(':lt(3)').hide();
+    // });
+
+
+
+    // size_li = $("#myList li").size();
+    // x=3;
+    // $('#myList li:lt('+x+')').show();
+    // $('#loadMore').click(function () {
+    //     x= (x+5 <= size_li) ? x+5 : size_li;
+    //     $('.list-comments li:lt(3)').show();
+    // });
+
 
 });
 
