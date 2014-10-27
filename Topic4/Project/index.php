@@ -31,12 +31,12 @@
 					$r1 = mysql_query($q1)or die("Query {$query} </br> MySQL Error:" . mysql_error($dbc));
 					//$num =  mysql_fetch_array($r,MYSQL_NUM);
 					$i = 0;
-					echo "<ul class=\"list-comments\">";
+					echo "<ul class=\"list-comments\" id = \"".$post['post_id']."\">";
 					while($cm = mysql_fetch_assoc($r1))
 					{
 						$i++;
-						if($i > 5)
-							break;
+						//if($i > 5)
+						//	break;
 						echo "<li><div class=\"comment well well-sm\">
 							<div class=\"user-comment\">
 								<a href=\"userpage.php?username=".$cm['username']."\"><b>". $cm['username']."</b></a>
@@ -50,8 +50,8 @@
 						</div></li>";
 					}
 					echo "</ul>";
-					if($i > 4)
-						echo "<a class=\"loadMore\" postvalue = \"".$post['post_id']."\" >Load more</a>";
+					//if($i > 4)
+						echo "<a class=\"loadMore ".$post['post_id']."\" >Load more</a>";
 					echo "<input type=\"text\" class=\"form-control comment\" postvalue = \"".$post['post_id']."\" placeholder=\"Viết lời bình luận\"></div>";
 				}
 				echo "</div>

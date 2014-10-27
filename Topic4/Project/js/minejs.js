@@ -63,7 +63,13 @@ $(document).ready(function() {
     });*/
 
     $('.posts').each(function(index){
-		$('.posts').find('ul').attr('id', 'listCmt_' + index);
+    	var abd = this;
+    	var i = $(abd).find('ul').attr('id');
+    	$('#' + i + ' li:lt(3)').show();
+    	$('.' + i).click(function() {
+    		$('#' + i + ' li').css('display','block');
+    	});
+		//$('.posts').find('#' + i).attr('id', 'listCmt_' + index);
 		/*$('#listCmt_' + index + 'li:lt(5)').show();
 		$('#listCmt_'+ index).find('.loadMore').attr('id', 'loadMore_' + index);
 		$('#loadMore_' + index).click(function(){
