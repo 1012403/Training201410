@@ -41,7 +41,7 @@
 								". $cm['comment']."
 							</div>
 							<div class=\"comment-time\">
-								". date ("d M Y, h:i:s A", mktime())."
+								". $cm['comment_time']."
 							</div>
 						</div>";
 					}

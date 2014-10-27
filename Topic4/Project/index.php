@@ -27,12 +27,15 @@
 					//comment
 					$q1 = "SELECT *
 					FROM comments , users
-					WHERE (post_id = {$post['post_id']} AND comments.user_id = users.user_id) ORDER BY comment_time DESC";
-					$r1 = mysql_query($q1)or die("Query {$query} </br> MySQL Error:" . mysql_error($dbc));;
+					WHERE (post_id = {$post['post_id']} AND comments.user_id = users.user_id) ORDER BY comment_time ASC";
+					$r1 = mysql_query($q1)or die("Query {$query} </br> MySQL Error:" . mysql_error($dbc));
 					//$num =  mysql_fetch_array($r,MYSQL_NUM);
+					$i = 0;
+					echo "<ul class=\"list-comments\">";
 					while($cm = mysql_fetch_assoc($r1))
 					{
-						echo "<div class=\"comment well well-sm\">
+						$i++;
+						echo "<li><div class=\"comment well well-sm\">
 							<div class=\"user-comment\">
 								<a href=\"userpage.php?username=".$cm['username']."\"><b>". $cm['username']."</b></a>
 							</div>
@@ -40,11 +43,13 @@
 								". $cm['comment']."
 							</div>
 							<div class=\"comment-time\">
-								". date ("d M Y, h:i:s A", mktime())."
+								". $cm['comment_time']."
 							</div>
-						</div>";
+						</div></li>";
 					}
-
+					echo "</ul>";
+					if($i > 4)
+						echo "<a class=\"loadMore\">Load more</a>";
 					echo "<input type=\"text\" class=\"form-control comment\" postvalue = \"".$post['post_id']."\" placeholder=\"Viết lời bình luận\"></div>";
 				}
 				echo "</div>

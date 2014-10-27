@@ -29,23 +29,6 @@ $(document).ready(function() {
 					});
 				}
 			});
-			/*$('.new-post').keypress(function(e){
-				var keycode = (e.keyCode ? e.keyCode : e.which);
-				if(keycode == '13'){
-				  	var url,data2;
-					var content = $(this).val();
-					var postid = $(this).attr("postvalue");
-					$(this).val('');
-					var username = $('#username').text();
-					var abs = this;
-					url = "shownewcomment.php";
-					data2 = { "content" : content, "username" : username, "post_id" : postid};
-					$.post(url,data2,function(data) {
-						$(data).insertBefore(abs);
-					});
-				}
-			});
-			$('.new-post').off("keypress");*/
 		});
 	});
 	$('.comment').keypress(function(e){
@@ -64,6 +47,13 @@ $(document).ready(function() {
 			});
 		}
 	});
+	$('.list-comments li:lt(3)').show();
+   /* $('#loadMore').click(function () {
+        $('#myList li:lt(10)').show();
+    });
+    $('#showLess').click(function () {
+        $('#myList li').not(':lt(3)').hide();
+    });*/
 
 });
 
