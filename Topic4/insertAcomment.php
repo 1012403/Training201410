@@ -15,9 +15,12 @@ require_once('functions.inc');
 			
 			$query = "INSERT INTO comment (Content,CmtDay,PostID,UserID) VALUES ('{$contentPost}',NOW(), $postid, $id)";
 			 if ($mysqli->query($query)) {
-	        	
+	        		$userIdCmt = $user->id;
 					error_log("Insert success");
-					return true;
+						echo "<div class=\"Comment\">";
+							echo "<a href=\"userpage.php?varId=$userIdCmt\">".$user->email.": </a>";
+							echo $contentPost;
+						echo "</div>";
 				} else {
 				
 					error_log("Problem inserting ");

@@ -1,5 +1,14 @@
 $(document).ready(function(){
-	
+	$('.delCmt').click(function(){
+		if (confirm("Do you want to delete this post?") == true){
+				var postId = $(this).attr('id');
+				$('#panel' + postId).remove();
+				$.post("delpost.php",{postABC : postId},function(data){
+				
+				});
+				
+		}
+	});
 
 	$("#postBtn").click(function(){
 		var content = $("#message").val();
@@ -34,8 +43,4 @@ $(document).ready(function(){
 					});
 				}
 	});
-
-	
-	
-
 });
