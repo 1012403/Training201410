@@ -6,7 +6,7 @@
 		}
 
 		public function listComment($postID){
-			$query = $this->db->query("Select C.CmtID, C.Content, C.PostID from comment C where C.PostID = '{$postID}'");
+			$query = $this->db->query("Select C.Content, C.PostID,C.CmtID from comment C where C.PostID = '{$postID}'");
 			return $query->result_array();
 		}
 

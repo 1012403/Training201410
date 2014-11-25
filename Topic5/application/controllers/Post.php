@@ -38,8 +38,8 @@
 
 					$email = $this->Muser->getEmail($_POST['GivenUser']);
 				
-					$result = array('Index' => $index,'Email' => $email);
-					echo json_encode($result);
+					$data = array('Index' => $index,'Email' => $email);
+					echo json_encode($data);
 			
 					
 				}
@@ -85,7 +85,7 @@
 			 	$data['userEmail'] = $this->Muser->getEmail($id);
 			 	$data['userName'] = $this->Muser->getName($id);
 			 	$data['userId'] = $id;
- 			 	$this->load->view('user_view',$data);
+ 			 	$this->load->view('home_view',$data);
 			 }
 		}
 
@@ -101,9 +101,16 @@
 			if ($this->my_auth->is_Login()){
 				$postID = $_POST['PostID'];		
 				$this->load->Model("Mcomment");	
-			$array = $this->Mcomment->listComment($postID);
-			echo json_encode($this->Mcomment->listComment($postID));
+				$array = $this->Mcomment->listComment($postID);
+				echo json_encode($this->Mcomment->listComment($postID));
 		
+			}
+		}
+		public function insertCommentToPost(){
+			if ($this->my_auth->is_Login()){
+				$data = $_POST['Data'];
+				$this->load->Model("Mcomment");
+				$this->Mcomment->addComment($data);
 			}
 		}
 	}

@@ -67,13 +67,14 @@
 			var IdAdmin = "<?php echo $this->my_auth->__get('userid'); ?>";
 			var UserID = "<?php echo $userId; ?>";
 			var showCmtUrl = '<?php echo base_url()?>' + 'index.php/post/showCommentByPost';
+			var insertCmt = '<?php echo base_url()?>' + 'index.php/post/insertCommentToPost';
 		</script>
 
 		<script type="text/html" id="viewTmpl">
 			<div class="post-item">
 				<a href="#" id="dellPost" data-bind="click: $root.dellPost">Delete status | </a>
 				<a href="#" id="startEdit" data-bind="click: $root.startEdit">Edit | </a>
-				<a href="#" id="viewDetail" data-bind="click: $root.viewDetail"> Detail </a>
+				<a href="#" id="viewDetail" data-bind="click: $root.viewDetail"> Detail | </a>
 				<a href="#" id="showCmt" data-bind="click: $root.showCmt"> Show comment </a>
 				<div class="panel-heading">
 					<a href="#" class="emailClick" data-bind="click: $root.emailClick, text: Email"></a>
@@ -86,7 +87,7 @@
 					<div data-bind="foreach: Comments">
 						<div data-bind="text: Content"/>
 					</div>	
-					<input class="cmtBox" type="text" data-bind="value: searchText, valueUpdate: 'afterkeydown', event: { keypress: $root.searchKeyboardCmd}">
+					<input class="cmtBox" type="text" data-bind="value: CmtContent, valueUpdate: 'afterkeydown', event: { keypress: $root.CmtEvent}">
 				</div>
 	
 				
@@ -103,7 +104,7 @@
 			<div class="panel-body">
 				<input  data-bind="value: Content"/>
 				
-				<div data-bind="foreach: ListCmt">
+				<div data-bind="foreach: Comments">
 					<div data-bind="text: Content"/>
 				</div>
 				

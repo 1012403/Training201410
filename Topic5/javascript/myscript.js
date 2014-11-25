@@ -6,8 +6,14 @@ $(document).ready(function(){
 		this.PostID = ko.observable(data.PostID || "");
 		this.PostTitle = ko.observable(data.PostTitle || "");
 		this.UserID = ko.observable(data.UserID || "");
-		this.Comments = ko.observable(data.Comments || []);
-		this.searchText = ko.observable(data.searchText || "");
+		this.Comments = ko.observableArray(data.Comments || []);
+	
+	}
+
+	function Comment(data){
+		this.Content = ko.observable(data.Content || "");
+		this.PostID = ko.observable(data.PostID || "");
+		
 	}
 
 	function PostModel() {
@@ -31,14 +37,20 @@ $(document).ready(function(){
 				var email = "";
 				var text = "";
 				$.post(window.urlInsert,{PostTitle:title,Content: message, PostUser: PostedID, GivenUser: GivenID},function(data){
+					
+				
 					email = data['Email'];
-					index = data['Index'];
+					index = data["Index"];
+					index = Number(index);
+					var item = {PostID:index,PostTitle:title,Content:message, Email:email, UserID: GivenID, CmtContent: text};
+					var newPost = new Post(item);
+					console.log(item);
+					self.ListPost.push(newPost);
+					
 				},"json");
-				index = Number(index) + 1;
-
-				var post = {PostID:index,PostTitle:title,Content:message, Email:email, UserID: GivenID, searchText: text};
-				console.log(post);
-				self.ListPost.push(post);
+				
+			
+			
 			
 	  	}
 	  	
@@ -54,12 +66,14 @@ $(document).ready(function(){
 	  	}
 
 	  	this.templateToUse = function(item){
+
 	  		return self.selectedItem() === item ? "editTmpl": "viewTmpl";
 	  	}
 	  	
 
-	  	this.finishEdit = function(){
+	  	this.finishEdit = function(post){
 	  		var item = self.selectedItem();
+
 	  		$.post(window.urlEdit,{PostID: item['PostID'], PostTitle: item['PostTitle'], Content: item['Content']});
 	  		self.selectedItem(null);
 	  	}
@@ -80,14 +94,25 @@ $(document).ready(function(){
 	  		});
 	  	}
 	  
-	  	this.searchKeyboardCmd = function (data, event) { 
+	  	this.CmtEvent = function (data, event) { 
 	  		if (event.keyCode == 13) 
 	  		{
-	  			var content = this.searchText();
-  				console.log(content);
-	  			this.searchText("");
-	  			
-	  			return true;	
+	  			var content = this.CmtContent();
+  				var postID = data["PostID"];
+  				var userID =  window.IdAdmin;	
+  				
+
+  				var item = {
+  					Content : content,
+  					PostID :postID,
+  					UserID : userID,
+  				};
+  				
+  				$.post(window.insertCmt,{Data: item});
+  				var newCmt = new Comment(item);
+  				data.Comments.push(newCmt);
+  				this.CmtContent('');
+	  		
 	  		}
 	  		return true;
 	  	
