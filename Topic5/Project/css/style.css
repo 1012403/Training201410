@@ -1,0 +1,176 @@
+body{
+	margin: 0 auto;
+	background-color: #F6F7F8;
+}
+.wrapper{
+
+	background-color: #F6F7F8;s
+	
+}
+.wrapper .header{
+	background: #37D7E2;
+	width: 100%;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+.logo{
+	padding-left: 0px;	
+}
+.logo span{
+	color: white;
+	font-size: 25px;
+}
+.logo b{
+	color: white;
+	font-size: 20px;
+}
+.content button{
+	margin-top:20px;
+}
+.content {
+	width: 50%;
+	float: left;
+}
+.post-area{
+	float: left;
+	width: 100%
+}
+#new-post{
+	float: left;
+}
+.posts {
+	width: 100%;
+	float: left;
+	margin-top:20px;
+	border-width:  1px;
+	border-color: #E5E5E5;
+	border-style: solid;
+	padding: 5px;
+}
+.posts .row{
+	margin-left: 0px;
+	margin-right: 0px;
+}
+.posts input{
+	width: 100%;
+	float: left;
+	margin-top: 7px;
+	margin-bottom: 5px;
+}
+.userpost {
+	float: left;
+}
+.post-time {
+	float: right;
+}
+.post-content{
+	margin-top: 4px;
+	float: left;
+	background: #FFFFFF;
+	padding-left: 7px;
+	padding-right: 7px;
+	padding-bottom: 7px;
+	width: 100%
+}
+.icons {
+	padding-left: 0px;
+	float: right;
+}
+.del-icon {
+	float: right;	
+}
+.del-icon img:hover{
+	display: block;
+}
+.edit-icon {
+	float: right;	
+}
+.edit-icon img:hover{
+	display: block;
+}
+.comments{
+	float: left;
+	margin-top: 7px; 
+}
+.comment{
+	width: 100%;
+	margin-top: 7px;
+}
+.comment{
+	float: left;
+}
+.user-comment{
+	float: left;
+	margin-right: 5px; 
+}
+.content-comment{
+	float: left;
+}
+.comment-time{
+	float: left;
+	width: 100%;
+}
+.icons-cm {
+	padding-left: 0px;
+	float: right;
+}
+.del-icon-cm {
+	float: right;
+}
+.del-icon-cm img:hover{
+	display: block;
+}
+.edit-icon-cm {
+	float: right;
+}
+.edit-icon-cm img:hover{
+	display: block;
+}
+.well{
+	margin-bottom: 0px;
+}
+.input-group{
+	margin-left: 30px;
+}
+button{
+	margin-left: 30px;
+}
+.menu{
+	float: right;
+}
+.menu a{
+	font-size: 15px;
+	color: white;
+	font-weight: bold;
+}
+.menu .nav li a:hover{
+	background: #31C6CE;
+}
+#poston{
+	float: right;
+}
+li {
+	list-style: none;
+}
+ul {
+	padding-left: 0px;
+}
+
+/*.list-comments li{ display:none;
+}*/
+.loadMore {
+    color:green;
+    cursor:pointer;
+}
+.loadMore:hover {
+    color:black;
+}
+.warning{
+	color: red;
+}
+.cancel {
+	float: right;
+}
+.posts .cancel{
+	margin-top: 0px;
+}
