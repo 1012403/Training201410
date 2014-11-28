@@ -168,5 +168,41 @@
 				return false; 
 			}
 		}
+
+		public function editUser($userid){
+			$this->load->Model("Muser");
+			$data['userInfo'] = $this->Muser->getInfoById($userid);
+		
+			$this->load->helper('form');
+			$this->load->library('form_validation');
+			
+		
+			$this->form_validation->set_rules('passwordnew','Password','matches[passwordconfirm]');
+		
+			if ($this->form_validation->run() == FALSE){
+
+				$this->load->view('edit_userView', $data);
+			}
+			else
+			{
+				$this->load->Model('Muser');
+				$data = array(
+					'FName' => $this->input->post("fname"),
+					'LName' => $this->input->post("lname"),
+					'Dob' => $_POST['dob'],
+				
+					'Password' => crypt($this->input->post("passwordnew")),
+					'Address' => $this->input->post("address"),
+					
+					);
+			
+				if ($this->Muser->updateUser($userid,$data) == true){    
+					$this->load->view("edit_success");
+				}
+
+			}
+
+		}
+
 	}
 ?>

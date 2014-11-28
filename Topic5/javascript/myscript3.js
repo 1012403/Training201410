@@ -10,46 +10,18 @@ $(document).ready(function(){
 		this.GivenUser = ko.observable(data.GivenUser || "");
 		this.Comments = ko.observableArray(data.Comments || []);
 		this.CmtContent = ko.observable(data.CmtContent || "");
-		this.selectCmt = ko.observable();
 		this.delCmt = function(item){
-			if (item['UserID'] == window.IdAdmin){
-				if (confirm("Do you want to delete this comment?") == true){
-					$.post(window.dellCmt,{Data: item['CmtID']});
-			  		self.Comments.remove(item);
-	  			}	
-			}
-			
-	  	}
-	  	this.editCmt = function(item){
-	  		if (item['UserID'] == window.IdAdmin){
-	  			self.selectCmt(item);	
+			if (confirm("Do you want to delete this comment?") == true){
+				$.post(window.dellCmt,{Data: item['CmtID']});
+		  		self.Comments.remove(item);
 	  		}
-	  		
-	  	}
-	  
-	  	this.templateComment = function(item){
 
-	  		return self.selectCmt() === item ? "editCmtTmpl": "viewCmtTmpl";
 	  	}
-	  	this.CmtEditEnter = function (data, event) { 
-	  		if (event.keyCode == 13) 
-	  		{
-	  		
-  			
-  				 $.post(window.editCmt,{Data: data['Content'], ID: data['CmtID']});
-  			
-  				self.selectCmt(null);
-	  		
-	  		}
-	  		return true;
-	  	
-	  	};
 	}
 
 	function Comment(data){
 		this.Content = ko.observable(data.Content || "");
 		this.PostID = ko.observable(data.PostID || "");
-		this.UserID = ko.observable(data.UserID || "");
 		
 	}
 
@@ -58,7 +30,6 @@ $(document).ready(function(){
 
 	  	self.ListPost = ko.observableArray([]);
 		ko.utils.arrayForEach(window.dataSource.ListPost, function(p){
-	
 			var newPost = new Post(p);
 			self.ListPost.push(newPost);
 		});
@@ -80,7 +51,6 @@ $(document).ready(function(){
 					email = data['Email'];
 					index = data["Index"];
 					index = Number(index);
-				
 					var item = {PostID:index,PostTitle:title,Content:message, Email:email, PostUser: PostedID, GivenUser: GivenID, CmtContent: text};
 					var newPost = new Post(item);
 					console.log(item);
@@ -92,22 +62,19 @@ $(document).ready(function(){
 	  	}
 	  	
 	  	this.dellPost = function(post){
-	  		if (post.PostUser() == window.IdAdmin || post.GivenUser() == window.IdAdmin){
-	  				if (confirm("Do you want to delete this post?") == true){
-						self.ListPost.remove(post); 
-						$.post(window.urlDell, {PostID: post['PostID']});
-					}
+	  		if (post.PostUser()== window.IdAdmin || post.GivenUser() == window.IdAdmin){
+		  			if (confirm("Do you want to delete this post?") == true){
+					self.ListPost.remove(post); 
+					$.post(window.urlDell, {PostID: post['PostID']});
+				}
 	  		}
 	  		
 	  	}
 
-	  	this.startEdit = function(post){
-	  		
-	  		 if (post.PostUser() == window.IdAdmin){
-	  		 	console.log("Sucess edit");
+	  	this.startEdit = function(task){
+	  		if (post.PostUser()  == window.IdAdmin){
 	  			self.selectedItem(post);
 	  		}
-	  		
 	  	}
 
 	  	this.templateToUse = function(item){
@@ -123,15 +90,6 @@ $(document).ready(function(){
 	  		self.selectedItem(null);
 	  	}
 
-	  	this.emailClick = function(post){
-	  		var item = post;
-	  		window.location.href = window.baseurl + item.GivenUser();
-	  	}
-
-	  	this.viewDetail = function(post){
-	  		window.location.href = window.viewUrl + post.PostID();
-	  	}
-	  	
 	  	
 	  	this.showCmt = function(item){
 	  		$.post(window.showCmtUrl,{PostID: item['PostID']},function(data){
@@ -164,7 +122,13 @@ $(document).ready(function(){
 	  	};
 
 	  
+
+	  
 	}
+
+
+	
+	
 
 	ko.applyBindings(new PostModel());
 

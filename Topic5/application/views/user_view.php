@@ -2,12 +2,14 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/Style/style.css">
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/bootstrap-3.2.0-dist/css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/bootstrap-3.2.0-dist/css/bootstrap-theme.css">		
 		<script type="text/javascript" src='<?php echo base_url();?>/javascript/jquery-1.8.3.min.js'></script>
 		<script type="text/javascript" src="<?php echo base_url();?>/bootstrap-3.2.0-dist/js/bootstrap.js"></script>
 		<script type="text/javascript" src="<?php echo base_url();?>/javascript/knockout-3.2.0.js"></script>
-		<script type="text/javascript" src="<?php echo base_url();?>/javascript/myscript.js"></script>
+		<script type="text/javascript" src="<?php echo base_url();?>/javascript/myscript3.js"></script>
+	
 	</head>
 	<body>
 		<div id="header">
@@ -25,9 +27,9 @@
 							</div>
 							<div class="collapse navbar-collapse" id="menu">
 								<ul class="nav navbar-nav navbar-right">
-									<li><a href="#" id="homePage">Homepage</a></li>
-									<li><a href="#" id="userPage">User</a></li>
-									<li><a href="#" id="Logout">Logout</a></li>
+									<li><a href="<?php echo base_url();?>index.php/post/showPostView" id="homePage">Homepage</a></li>
+									<li><a href="<?php echo base_url();?>index.php/login/logout" id="Logout">Logout</a></li>
+									<li><a href="<?php echo base_url();?>index.php/register/editUser/<?php echo $this->my_auth->__get("userid")?>">Edit info</a></li>
 								</ul>
 							</div>
 						</div>
@@ -39,7 +41,7 @@
 
 		<div id="container">
 			<div class="row">
-				<div class="left-panel col-md-4">
+				<div class="left-panel col-md-4 col-md-push-1">
 					<h2>User information</h2>
 					<div class="Name"><?php echo $userName; ?></div>
 					<div class="Email"><?php echo $userEmail; ?></div>
@@ -65,11 +67,14 @@
 					<script type="text/javascript">
 						var dataSource = {};
 						dataSource.ListPost = JSON.parse('<?php echo json_encode($listPost); ?>');
-						var urlInsert = '<?php echo base_url()?>' + '/index.php/post/insertAPost';
-						var urlDell = '<?php echo base_url()?>' + '/index.php/post/dellAPost';
-						var urlEdit = '<?php echo base_url()?>' + '/index.php/post/updatePost';
+						var urlInsert = '<?php echo base_url()?>' + 'index.php/post/insertAPost';
+						var urlDell = '<?php echo base_url()?>' + 'index.php/post/dellAPost';
+						var urlEdit = '<?php echo base_url()?>' + 'index.php/post/updatePost';
 						var IdAdmin = "<?php echo $this->my_auth->__get('userid'); ?>";
 						var UserID = "<?php echo $userId; ?>";
+						var showCmtUrl = '<?php echo base_url()?>' + 'index.php/post/showCommentByPost';
+						var insertCmt = '<?php echo base_url()?>' + 'index.php/post/insertCommentToPost';
+						var dellCmt = '<?php echo base_url()?>' + 'index.php/post/dellComment';
 					</script>
 
 					<script type="text/html" id="editTmpl">
@@ -85,14 +90,28 @@
 					</script>
 
 					<script type="text/html" id="viewTmpl">
-						<a href="#" id="dellPost" data-bind="click: $root.dellPost">Delete status</a>
+						<div class="post-item panel-default">
+								<a href="#" id="dellPost" data-bind="click: $root.dellPost">Delete status</a>
 						<a href="#" id="startEdit" data-bind="click: $root.startEdit">Edit</a>
+						<a href="#" id="showCmt" data-bind="click: $root.showCmt">Show Comment</a>
 						<div class="panel-heading">
-						
 							<div data-bind="text: PostTitle"/>
 						</div>
-						<div class="panel-body" data-bind="text: Content"></div>
-						<br>
+						<div class="panel-body">
+							<div  data-bind="text: Content"/>
+							<strong>Comments</strong>
+							<div data-bind="foreach: Comments">
+								<div class="row">
+									<div class="col-md-4" data-bind="text: Content"></div>
+									<span  class="dellCmt col-md-4 glyphicon glyphicon-remove" aria-hidden="true" data-bind="click: $parent.delCmt"></span>
+								</div>
+							
+							</div>	
+							<input class="cmtBox" type="text" data-bind="value: CmtContent, valueUpdate: 'afterkeydown', event: { keypress: $root.CmtEvent}">
+						</div>
+						</div>
+						
+					
 					</script>	
 				</div>	
 		</div>

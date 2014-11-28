@@ -14,8 +14,9 @@
 			 if($this->my_auth->is_Login()){
 				$data['listPost'] = $this->Mpost->listPost();
 				$data['userId'] = $this->my_auth->__get("userid");
-			 	$this->load->view('home_view',$data);
+			 	 $this->load->view('home_view',$data);
 			 }
+
 		}
 
 		public function insertAPost(){
@@ -53,8 +54,14 @@
 		public function dellAPost(){
 			if ($this->my_auth->is_Login()){
 				$postID = $_POST['PostID'];
-				if ($this->Mpost->dellPost($postID) == true){
+				$this->load->Model("Mcomment");
+				if ($this->Mcomment->dellComment($postID) == true){
+					if ($this->Mpost->dellPost($postID) == true){
 					return true;
+					}
+					else {
+						return false;
+					}
 				}
 				else return false;
 			}
@@ -85,7 +92,7 @@
 			 	$data['userEmail'] = $this->Muser->getEmail($id);
 			 	$data['userName'] = $this->Muser->getName($id);
 			 	$data['userId'] = $id;
- 			 	$this->load->view('home_view',$data);
+ 			 	$this->load->view('user_view',$data);
 			 }
 		}
 
@@ -93,6 +100,9 @@
 			if ($this->my_auth->is_Login()){
 				$this->load->Model("Mcomment");
 				$data['listComment'] = $this->Mcomment->listComment($postID);
+				$this->load->Model('Mpost');
+				$data['title'] = $this->Mpost->getPostTitle($postID);
+				$data['content'] = $this->Mpost->getPostContent($postID);
 				$this->load->view('detail_view',$data);
 			}
 		}
@@ -106,11 +116,35 @@
 		
 			}
 		}
+
 		public function insertCommentToPost(){
 			if ($this->my_auth->is_Login()){
 				$data = $_POST['Data'];
 				$this->load->Model("Mcomment");
 				$this->Mcomment->addComment($data);
+			}
+		}
+
+		public function dellComment(){
+			if ($this->my_auth->is_Login()){
+				$data = $_POST['Data'];
+				$this->load->Model('Mcomment');
+				$this->Mcomment->dellComment($data);
+
+			}
+		}
+
+		public function editComment(){
+			if ($this->my_auth->is_Login()){
+				
+				$id = $_POST['ID'];
+				$data = array(
+					"Content" => $_POST['Data'],
+					
+				);
+				$this->load->Model('Mcomment');
+				$this->Mcomment->updateComment($data,$id);
+
 			}
 		}
 	}

@@ -62,6 +62,7 @@
 		public function updateUser($userid,$update){
 			$this->db->where("UserID",$userid);
 			$this->db->update("user",$update);
+			return true;
 		}
 
 		public function userId($email){
@@ -90,5 +91,24 @@
 			}
 			
 		}
+
+		public function getInfoById($id){
+			$query = $this->db->query("Select UserID, FName, LName, Dob, Email, Password, Address from user where UserID = '{$id}'");
+			if ($query->num_rows() > 0){
+				$row = $query->row();
+				$data = array(
+					"UserID" => $row->UserID,
+					"FName" => $row->FName,
+					"LName" => $row->LName,
+					"Dob" => $row->Dob,
+					"Email" => $row->Email,
+					"Password" => $row->Password,
+					"Address" => $row->Address);
+				return $data;
+			}
+			
+		}
+
+
 	}
 ?>

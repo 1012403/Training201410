@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/Style/style.css">
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/bootstrap-3.2.0-dist/css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/bootstrap-3.2.0-dist/css/bootstrap-theme.css">		
 		<script type="text/javascript" src='<?php echo base_url();?>/javascript/jquery-1.8.3.min.js'></script>
@@ -25,9 +26,10 @@
 							</div>
 							<div class="collapse navbar-collapse" id="menu">
 								<ul class="nav navbar-nav navbar-right">
-									<li><a href="#" id="homePage">Homepage</a></li>
-									<li><a href="<?php echo base_url();?>/index.php/post/showPostViewByUser/<?php echo $this->my_auth->__get("userid")?>" id="userPage">User</a></li>
-									<li><a href="#" id="Logout">Logout</a></li>
+									<li><a href="<?php echo base_url();?>index.php/post/showPostView" id="homePage">Homepage</a></li>
+									<li><a href="<?php echo base_url();?>index.php/post/showPostViewByUser/<?php echo $this->my_auth->__get("userid")?>" id="userPage">User</a></li>
+									<li><a href="<?php echo base_url();?>index.php/login/logout" id="Logout">Logout</a></li>
+								
 								</ul>
 							</div>
 						</div>
@@ -60,18 +62,21 @@
 		<script type="text/javascript">
 			var dataSource = {};
 			dataSource.ListPost = JSON.parse('<?php echo json_encode($listPost); ?>');
-			var urlInsert = '<?php echo base_url()?>' + '/index.php/post/insertAPost';
-			var urlDell = '<?php echo base_url()?>' + '/index.php/post/dellAPost';
-			var urlEdit = '<?php echo base_url()?>' + '/index.php/post/updatePost';
-			var baseurl = '<?php echo base_url()?>' + '/index.php/post/showPostViewByUser/';
+			var urlInsert = '<?php echo base_url()?>' + 'index.php/post/insertAPost';
+			var urlDell = '<?php echo base_url()?>' + 'index.php/post/dellAPost';
+			var urlEdit = '<?php echo base_url()?>' + 'index.php/post/updatePost';
+			var baseurl = '<?php echo base_url()?>' + 'index.php/post/showPostViewByUser/';
 			var IdAdmin = "<?php echo $this->my_auth->__get('userid'); ?>";
-			var UserID = "<?php echo $userId; ?>";
+			var UserID = "<?php echo $this->my_auth->__get('userid'); ?>";
 			var showCmtUrl = '<?php echo base_url()?>' + 'index.php/post/showCommentByPost';
 			var insertCmt = '<?php echo base_url()?>' + 'index.php/post/insertCommentToPost';
+			var editCmt = '<?php echo base_url()?>' + 'index.php/post/editComment';
+			var viewUrl = '<?php echo base_url()?>' + 'index.php/post/viewPostDetail/';
+			var dellCmt = '<?php echo base_url()?>' + 'index.php/post/dellComment';
 		</script>
 
 		<script type="text/html" id="viewTmpl">
-			<div class="post-item">
+			<div class="post-item panel-default">
 				<a href="#" id="dellPost" data-bind="click: $root.dellPost">Delete status | </a>
 				<a href="#" id="startEdit" data-bind="click: $root.startEdit">Edit | </a>
 				<a href="#" id="viewDetail" data-bind="click: $root.viewDetail"> Detail | </a>
@@ -84,8 +89,8 @@
 					<strong>Content</strong>
 					<div data-bind="text: Content"></div>	
 					<strong>Comments</strong>			
-					<div data-bind="foreach: Comments">
-						<div data-bind="text: Content"/>
+					<div data-bind="template:{ name: templateComment, foreach: Comments}">
+						
 					</div>	
 					<input class="cmtBox" type="text" data-bind="value: CmtContent, valueUpdate: 'afterkeydown', event: { keypress: $root.CmtEvent}">
 				</div>
@@ -97,19 +102,31 @@
 
 		<script type="text/html" id="editTmpl">
 			<a href="#" id="finishEdit" data-bind="click: $root.finishEdit">Finish</a>
-			<div class="panel-heading">
-				<input data-bind="value: PostTitle"/>
-				<a href="#" id="emailClick"  data-bind="click: $root.emailClick, text: Email"></a>
-			</div>
-			<div class="panel-body">
-				<input  data-bind="value: Content"/>
-				
-				<div data-bind="foreach: Comments">
-					<div data-bind="text: Content"/>
+			<div class="panel-default">
+				<div class="panel-heading">
+					<input data-bind="value: PostTitle"/>
+					<a href="#" id="emailClick"  data-bind="click: $root.emailClick, text: Email"></a>
 				</div>
-				
+				<div class="panel-body">
+					<input  data-bind="value: Content"/>				
+				</div>
 			</div>
 			<br>
+		</script>
+
+		<script type="text/html" id="viewCmtTmpl">
+			<div class="row">
+				<div class="col-md-2" data-bind="text: Content"></div>
+				<span  class="dellCmt  glyphicon glyphicon-remove" aria-hidden="true" data-bind="click: $parent.delCmt"></span>
+				<span  class="editCmt 	glyphicon glyphicon-edit" aria-hidden="true" data-bind="click: $parent.editCmt"></span>
+			</div>
+		</script>
+
+		<script type="text/html" id="editCmtTmpl">
+			<div class="row">
+				<input class="col-md-push-1 editCmtBox" type="text" data-bind="value:Content, valueUpdate:'afterkeydown',event:{keypress:$parent.CmtEditEnter}">
+				
+			</div>
 		</script>
 	
 	</body>

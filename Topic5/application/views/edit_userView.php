@@ -9,8 +9,11 @@
 	<body>
 		<?php
 			echo validation_errors();
-			echo form_open('Register');
-			echo form_fieldset('Register user:');
+
+			$stringAddress = "register/editUser/".strval($userInfo['UserID']) ;
+	
+			echo form_open($stringAddress);
+			echo form_fieldset('Edit information:');
 			$att_label = array(
 				'class' => 'label label-primary');
 			echo form_label('First name:');
@@ -18,49 +21,49 @@
 				'name' => 'fname',
 				'id' => 'fname',
 				'class'=>'form-control',
-				'value' => '');
+				'value' => $userInfo['FName']);
 			echo form_input($fname);
 			echo form_label('Last name');
 			$lname = array(
 				'name' =>'lname',
 				'id' =>'lname',
 				'class' => 'form-control',
-				'value' => '');
+				'value' => $userInfo['LName']);
 			echo form_input($lname);
-			echo form_label('Email');
-			$email = array(
-				'name' => 'email',
-				'id' => 'email',
-				'class'=>'form-control',
-				'value' => '');
-			echo form_input($email);
-			echo form_label('Password');
-			$password1 = array(
-				'name' =>'password1',
-				'id' => 'password1',
-				'class' => 'form-control',
-				'value'=>'');
-			echo form_password($password1);
-			echo form_label('Verify password');
-			$password2 = array(
-				'name'=> 'password2',
-				'id'=>'password2',
+		
+			
+
+			echo form_label('New password: (Optional)');
+			$passwordnew = array(
+				'name'=> 'passwordnew',
+				'id'=>'passwordnew',
 				'class'=>'form-control',
 				'value'=>'');
-			echo form_password($password2);
-			echo form_label("Date of birth");
-			echo "<input type=\"date\" class=\"form-control\" name=\"dob\" id=\"dob\">";
+			echo form_password($passwordnew);
+
+			echo form_label('Confirm password: (Optional)');
+			$passwordconfirm = array(
+				'name'=> 'passwordconfirm',
+				'id'=>'passwordconfirm',
+				'class'=>'form-control',
+				'value'=>'');
+			echo form_password($passwordconfirm);	
+
+			echo form_label("Date of birth: (YYYY-MM-DD)");
+			$date = $userInfo['Dob'];
+			echo "<input type=\"date\" class=\"form-control\" name=\"dob\" id=\"dob\" value=\"$date\">";
 			echo form_label("Address");
 			$address = array(
 				'name' =>'address',
 				'id' => 'address',
 				'class' => 'form-control',
-				'value' =>'');
+				'value' =>$userInfo['Address']);
 			echo form_input($address);
+
 			$submit = array(
 				'name' =>'submit',
 				'id' =>'submit',
-				'value'=>'Login');
+				'value'=>'Ok');
 			echo form_submit($submit);
 		?>
 	</body>
