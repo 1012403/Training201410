@@ -1,0 +1,408 @@
+
+.box {
+    background: url("../image/bg_top.png") no-repeat scroll left top #ffffff;
+    border-radius: 5px;
+    float: right;
+    margin-bottom: 10px;
+    position: relative;
+}
+.box .right {
+    background: url("../image/bg_top.png") no-repeat scroll right -69px rgba(0, 0, 0, 0);
+    height: 38px;
+    position: absolute;
+    right: -17px;
+    top: -1px;
+    width: 17px;
+    z-index: 2;
+}
+.box .top {
+    background: url("../image/bg_top.png") no-repeat scroll left -107px rgba(0, 0, 0, 0);
+    border-radius: 5px 5px 0 0;
+    display: inline-block;
+    float: right;
+    height: 37px;
+    padding-left: 3px;
+    position: relative;
+    z-index: 2;
+}
+.box .top div {
+    background: url("../image/bg_top.png") no-repeat scroll left -37px rgba(0, 0, 0, 0);
+    color: #000;
+    display: block;
+    font-family: "Open Sans Condensed",Arial;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 32px;
+    margin: 5px 0 0;
+    padding-left: 20px;
+    padding-right: 0;
+    text-align: right;
+    text-transform: uppercase;
+}
+.box .top div span {
+    color: #e30415;
+    font-family: "Open Sans Condensed",Arial;
+}
+.box .middle {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 #fff;
+    border-color: -moz-use-text-color #d8d8d8 #d8d8d8;
+    border-image: none;
+    border-radius: 0 0 5px 5px;
+    border-right: 1px solid #d8d8d8;
+    border-style: none solid solid;
+    border-width: medium 1px 1px;
+    float: right;
+    width: 218px;
+}
+.box ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+.box li {
+    margin: 0;
+    padding: 0;
+}
+.box.news li ul li {
+    border-top: 1px solid #d8d8d8;
+    overflow: hidden;
+}
+.sb_news li ul li {
+    height: 88px;
+}
+.box.news li ul li a {
+    display: block;
+    height: 88px;
+}
+.sb_news li ul li a {
+    height: 88px;
+}
+.box.news li ul li.sb_top {
+    border: medium none;
+}
+.sb_news li ul li .sn_image {
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    float: left;
+    height: 68px;
+    margin: 8px;
+    overflow: hidden;
+    width: 68px;
+}
+.sb_news li ul li img {
+    height: 68px;
+    min-width: 68px;
+}
+.sb_news li ul li .sn_name {
+    color: #000;
+    padding-right: 10px;
+    padding-top: 10px;
+    transition: all 200ms ease 10ms;
+}
+.sb_news li ul li:hover .sn_name {
+    color: #fd5f00;
+}
+.sb_news li ul li .sn_date_added {
+    color: #777;
+    font-size: 11px;
+    margin: 3px 0;
+}
+.box .bx-prev {
+    background: url("../image/bprev1.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 22px;
+    left: 0;
+    position: absolute;
+    text-indent: -999999px;
+    top: -27px;
+    width: 15px;
+}
+.box .bx-next {
+    background: url("../image/bnext1.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 22px;
+    left: 16px;
+    position: absolute;
+    text-indent: -999999px;
+    top: -27px;
+    width: 15px;
+}
+.sb_news.moinhat .bx-next, .sb_news.moinhat .bx-prev {
+    top: -191px;
+}
+.box .bx-next.hide {
+    background: url("../image/bnext.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+    cursor: default;
+}
+.box .bx-prev.hide {
+    background: url("../image/bprev.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+    cursor: default;
+}
+.box .bx-prev:hover {
+    background: url("../image/bprev2.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.box .bx-next:hover {
+    background: url("../image/bnext2.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.sb_xemthem {
+    color: #999 !important;
+    font-size: 11px;
+    font-weight: bold;
+    left: 33px;
+    position: absolute;
+    top: 14px;
+}
+.sb_xemthem:hover {
+    color: #fd5f00 !important;
+}
+.sb_hoidap li ul li {
+    height: 88px;
+}
+.sb_hoidap .sbhd_left {
+    background: url("../image/queans.png") no-repeat scroll center 20px rgba(0, 0, 0, 0);
+    float: left;
+    height: 88px;
+    position: relative;
+    transition: all 200ms ease 10ms;
+    width: 68px;
+}
+.sb_hoidap .sbhd_left .sbhd_reply {
+    bottom: 9px;
+    color: #777;
+    font-size: 11px;
+    left: 5px;
+    position: absolute;
+}
+.sb_hoidap .sbhd_right {
+    margin-left: 70px;
+    padding: 8px 5px 5px 0;
+}
+.sb_hoidap .sbhd_right b {
+    color: #000;
+    transition: all 200ms ease 10ms;
+}
+.sb_hoidap .sbhd_right .sbhd_date_added {
+    color: #777;
+    font-size: 11px;
+}
+.sb_hoidap .sbhd_right .sbhd_text {
+    color: #555;
+    font-size: 11px;
+    height: 42px;
+    overflow: hidden;
+}
+.sb_hoidap li ul li:hover .sbhd_text, .sb_hoidap li ul li:hover .sbhd_reply {
+    color: #000;
+}
+.sb_hoidap li ul li:hover .sbhd_right b {
+    color: #fd5f00;
+}
+.sb_hoidap li ul li:hover .sbhd_left {
+    background: url("../image/queans_hover.png") no-repeat scroll center 20px rgba(0, 0, 0, 0);
+}
+.box_menu a {
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    color: #fff;
+    display: block;
+    font-size: 15px;
+    font-weight: normal;
+    height: 68px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    transition: all 300ms ease 70ms;
+}
+.box_menu a:hover {
+    background-position: 157px center;
+    box-shadow: 0 1px 25px rgba(0, 0, 0, 0.4) inset;
+}
+.box_menu a span {
+    display: block;
+    font-family: "Open Sans Condensed",Arial,Helvetica,sans-serif;
+    line-height: 68px;
+    margin-left: 59px;
+    text-align: center;
+    transition: all 300ms ease 70ms;
+    width: 157px;
+}
+.box_menu a:hover span {
+    margin-left: 0;
+}
+ul.sblist {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+    width: 218px;
+}
+.sblist li {
+    border-bottom: 1px solid #d8d8d8;
+    height: 89px !important;
+    overflow: hidden;
+    position: relative;
+    text-align: left;
+    width: 218px;
+}
+.sblist li a {
+    color: #000;
+    display: block;
+}
+.sblist li.list_right {
+    margin-right: 0;
+}
+.sblist li .list_image {
+    display: block;
+    float: left;
+}
+.sblist li .list_image img {
+    border-radius: 5px 0 0 5px;
+    display: block;
+    float: left;
+    margin: 5px;
+}
+.sblist li .list_name {
+    color: #000;
+    font-size: 12px;
+    height: 32px;
+    overflow: hidden;
+    padding: 10px 10px 0 0;
+}
+.sblist li:hover .list_name {
+    color: #fd7600;
+}
+.sblist li .list_price {
+    bottom: 0;
+    position: absolute;
+    right: 5px;
+}
+.sblist li .list_price .price {
+    display: block;
+    float: right;
+    font-size: 14px;
+    font-weight: bold;
+    min-width: 81px;
+    padding: 0 5px 5px 0;
+    text-align: right;
+}
+.sblist li .list_price .price font {
+    color: #f00;
+}
+.sblist li .list_price .special {
+    display: block;
+    float: right;
+    font-size: 12px;
+    margin-bottom: 5px;
+    padding: 0 5px 0 0;
+}
+.sblist li .list_price .special font {
+    color: #888;
+    padding-left: 15px;
+    text-decoration: line-through;
+}
+.sblist li .sblist_info {
+    display: block;
+    height: 240px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 218px;
+}
+.sblist li .list_desc {
+    height: 89px;
+    position: relative;
+    width: 100%;
+}
+.sblist li .list_bdesc {
+    background: none repeat scroll 0 0 #f8f8f8;
+    height: 110px;
+    padding: 5px;
+    position: relative;
+    width: 208px;
+}
+.list_bdesc .lbdesc {
+    display: block;
+    max-height: 75px;
+    overflow: hidden;
+}
+.list_bdesc p {
+    margin: 0;
+    padding: 0;
+}
+.list_bdesc .lprom {
+    color: #f00;
+    display: block;
+    height: 30px;
+    overflow: hidden;
+}
+.list_bdesc .lprom b {
+    color: #000;
+}
+.box .middle.special .listsp {
+    height: 359px;
+    overflow: hidden;
+}
+.topnews {
+    height: 164px;
+    overflow: hidden;
+    position: relative;
+    width: 220px;
+}
+.topnews .tn_image {
+    height: 164px;
+    overflow: hidden;
+    width: 218px;
+}
+.topnews .tn_image img {
+    min-height: 164px;
+    width: 220px;
+}
+.topnews .tn_desc {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
+    bottom: 0;
+    color: #ffffff;
+    left: 0;
+    margin: 0;
+    padding: 10px;
+    position: absolute;
+    transition: background-color 0.3s ease 0s;
+    width: 198px;
+}
+.topnews .tn_desc .tn_date_added {
+    color: #ddd;
+    font-size: 11px;
+}
+.topnews:hover .tn_desc {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.9);
+}
+.lienket {
+    text-align: center;
+}
+.lienket img {
+    border: 1px solid #dfdfdf;
+    border-radius: 5px;
+    height: auto !important;
+    width: 218px !important;
+}
+.lienket p {
+    margin: 0;
+    padding: 0;
+}
+.lienketht {
+    padding-bottom: 5px;
+    width: 218px;
+}
+.lienketht p {
+    margin: 0;
+}
+.lienketht img {
+    border: 1px solid #dfdfdf;
+    border-radius: 5px;
+    display: block;
+    height: auto !important;
+    margin-left: 5px;
+    margin-top: 5px;
+    width: 206px !important;
+}

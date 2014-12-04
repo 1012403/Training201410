@@ -30,7 +30,15 @@
 	<link href="//fonts.googleapis.com/css?family=Open+Sans:400,400i,300,700" rel="stylesheet" type="text/css" />
 	<link href="catalog/view/theme/customtheme/stylesheet/stylesheet.css" rel="stylesheet">
 	<link href="catalog/view/theme/customtheme/stylesheet/menu.css" rel="stylesheet">
+	<link href="catalog/view/theme/customtheme/stylesheet/cart.css" rel="stylesheet">
 	<link href="catalog/view/theme/customtheme/stylesheet/header.css" rel="stylesheet">
+	<link href="catalog/view/theme/customtheme/stylesheet/sidebar.css" rel="stylesheet">
+
+	<link href="catalog/view/theme/customtheme/bxSlider/bxSlider.css" rel="stylesheet">
+
+	/*<!-- <script src="catalog/view/javascript/jquery/colorbox/jquery.colorbox.js" type="text/javascript"></script> -->*/
+	<script src="catalog/view/javascript/bxSlider.js" type="text/javascript"></script>
+	<script src="catalog/view/javascript/jquery.bxSlider.js" type="text/javascript"></script>
 	<?php foreach ($styles as $style) { ?>
 	<link href="<?php echo $style['href']; ?>" type="text/css" rel="<?php echo $style['rel']; ?>" media="<?php echo $style['media']; ?>" />
 	<?php } ?>
@@ -50,17 +58,7 @@
 			<div class="left">
 				<a class="tba" href="http://2tmobile.com/info/about/"><span class="tspan tabout"></span>Giới thiệu</a>
 				<a class="tba hethongcuahang cboxElement" onclick="http://2tmobile.com/info/showroom/"><span class="tspan tshowroom"></span>Hệ thống cửa hàng</a>
-				<script type="text/javascript">
-					$(document).ready(function() {
-						$('.hethongcuahang').colorbox({
-							overlayClose: false,
-							initialHeight: "540",
-							initialWidth: "800",
-							escKey: false,
-							opacity: 0.5
-						});
-					});
-				</script>
+			
 				<a class="tba tright" href="http://2tmobile.com/info/contact/"><span class="tspan tcontact"></span>Liên hệ</a>
 			</div>
 			<div class="right">
@@ -114,8 +112,8 @@
 						<div class="dropdown catid_">
 							<div class="mliImage"></div>
 
-							<?php foreach(array_chunk($category['children'], ceil(count($category['children']) / $category['column'])) as $children) { ?>
-							<?php foreach($children as $child){?>
+							
+							<?php foreach($category['children'] as $child){?>
 							<div class="col_1">
 								<div class="col_title">
 									<a href="<?php echo $child['href'];?>"><?php echo $child['name'];?></a>
@@ -133,7 +131,7 @@
 								</ul>
 							</div>
 							<?php } ?>
-							<?php } ?>
+
 						</div>
 					</li>
 					<?php }  else { ?>	
@@ -143,6 +141,20 @@
 				</li>
 			</ul>
 		</nav>
+		<script language="javascript"> 
+			$('#menu li.mliTop').mouseenter(function() {
+				$('#menu li.mliTop').removeClass('select');
+			});
+			$('#menu li.mliTop').mouseleave(function() {
+				$('#menu .active').addClass('select');
+			});
+			$('.simple li').mouseenter(function() {
+				$('.simple li').removeClass('select');
+			});
+			$('.simple li').mouseleave(function() {
+				$('.simple .active').addClass('select');
+			});
+		</script>
 
 	</div>
 	<?php } ?>

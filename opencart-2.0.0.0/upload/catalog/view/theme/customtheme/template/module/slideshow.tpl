@@ -1,18 +1,50 @@
-<div id="slideshow<?php echo $module; ?>" class="flexslider">
-  <ul class="slides">
-    <?php foreach ($banners as $banner) { ?>
-    <?php if ($banner['link']) { ?>
-    <li><a href="<?php echo $banner['link']; ?>"><img src="<?php echo $banner['image']; ?>" alt="<?php echo $banner['title']; ?>" class="img-responsive" /></a></li>
+<div id="slideshow<?php echo $module; ?>" class="slideshow" >
+  <div class="sl_arrow_tl"></div>
+  <div class="sl_arrow_tr"></div>
+  <div class="sl_arrow_bl"></div>
+  <div class="sl_arrow_br"></div>  
+  <div class="bx-wrapper">
+    <div class="bx-window">
+     <ul id="slider1">
+      <?php foreach ($banners as $banner) {?>
+      <li class="pager">
+        <a href="<?php echo $banner['link']; ?>">
+          <img src="<?php echo $banner['image']; ?>" />
+        </a>
+      </li>
+      <?php } ?>
+    </ul>
+  </div>
+  <div class="bx-pager">
+    <?php $count = 0 ?>
+    <?php foreach($banners as $banner) { $count = $count + 1;?>
+    <?php if ($count == 1) {?>
+
+    <a href="<?php echo $banner['link']; ?>" class="paper-top pager-link pager-<?php echo $count?>;">
+      <span class="paper-left"></span>
+      <span class="paper-name"><?php echo $banner['title'];?></span>
+      <span class="pager-desc"></span>
+    </a>
     <?php } else { ?>
-    <li><img src="<?php echo $banner['image']; ?>" alt="<?php echo $banner['title']; ?>" class="img-responsive" /></li>
+    <a href="<?php echo $banner['link']; ?>" class="pager-link pager-<?php echo $count?>;">
+      <span class="paper-left"></span>
+      <span class="paper-name"><?php echo $banner['title'];?></span>
+      <span class="pager-desc"></span>
+    </a>
     <?php } ?>
     <?php } ?>
-  </ul>
+  </div>
 </div>
-<script type="text/javascript"><!--
-$('#slideshow<?php echo $module; ?>').flexslider({
-	animation: 'slide',
-	animationLoop: true,
-	itemWidth: <?php echo $width; ?>
-});
---></script>
+
+</div>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#slider1').bxSliderHome({
+      mode: 'vertical',
+      controls: false,
+      pager: true,
+      autoHover: true,
+      pagerHover: true
+    });
+  });
+</script>

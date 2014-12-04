@@ -125,7 +125,6 @@ class ControllerCommonHeader extends Controller {
 					$sub_childrean_data = array();
 					//Level 3
 					if ($child['top']){
-						
 						$sub_children = $this->model_catalog_category->getCategories($child['category_id']);
 						foreach ($sub_children as $sub_child){
 							$sub_filter_data = array(
@@ -137,8 +136,6 @@ class ControllerCommonHeader extends Controller {
 								'href'  => $this->url->link('product/category', 'path=' . $category['category_id'] . '_' . $child['category_id'].'_'.$sub_child['category_id'])
 							);
 						}
-
-
 					}
 
 					$filter_data = array(
@@ -146,7 +143,6 @@ class ControllerCommonHeader extends Controller {
 						'filter_sub_category' => true
 					);
 
-				
 					$children_data['children'][] = array(
 							'name' =>  $child['name'] . ($this->config->get('config_product_count') ? ' (' . $this->model_catalog_product->getTotalProducts($filter_data) . ')' : ''),
 							'sub_children' => $sub_childrean_data,
@@ -154,7 +150,6 @@ class ControllerCommonHeader extends Controller {
 							'href' => $this->url->link('product/category', 'path=' . $category['category_id'] . '_' . $child['category_id'])
 					);
 				}
-
 				// Level 1
 				$data['categories'][] = array(
 					'name'     => $category['name'],
@@ -165,7 +160,6 @@ class ControllerCommonHeader extends Controller {
 				
 			}
 		}
-
 		$data['language'] = $this->load->controller('common/language');
 		$data['currency'] = $this->load->controller('common/currency');
 		$data['search'] = $this->load->controller('common/search');
@@ -192,6 +186,7 @@ class ControllerCommonHeader extends Controller {
 			return $this->load->view($this->config->get('config_template') . '/template/common/header.tpl', $data);
 		} else {
 			return $this->load->view('default/template/common/header.tpl', $data);
+			
 		}
 	}
 }

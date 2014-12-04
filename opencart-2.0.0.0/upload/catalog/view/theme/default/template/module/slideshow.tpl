@@ -10,9 +10,9 @@
   </ul>
 </div>
 <script type="text/javascript"><!--
-$('#slideshow<?php echo $module; ?>').flexslider({
-	animation: 'slide',
-	animationLoop: true,
-	itemWidth: <?php echo $width; ?>
-});
+  $('#slideshow<?php echo $module; ?>').flexslider({
+   animation: 'slide',
+   animationLoop: true,
+   itemWidth: <?php echo $width; ?>
+ });
 --></script>
