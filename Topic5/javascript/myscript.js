@@ -8,11 +8,12 @@ $(document).ready(function(){
 		this.PostTitle = ko.observable(data.PostTitle || "");
 		this.PostUser = ko.observable(data.PostUser || "");
 		this.GivenUser = ko.observable(data.GivenUser || "");
+		this.View = ko.observable(data.View || "");
 		this.Comments = ko.observableArray(data.Comments || []);
 		this.CmtContent = ko.observable(data.CmtContent || "");
 		this.selectCmt = ko.observable();
 		this.delCmt = function(item){
-			if (item['UserID'] == window.IdAdmin){
+			if (item['UserID'] == window.IdAdmin || item['PostUser'] == window.IdAdmin){
 				if (confirm("Do you want to delete this comment?") == true){
 					$.post(window.dellCmt,{Data: item['CmtID']});
 			  		self.Comments.remove(item);
@@ -21,7 +22,7 @@ $(document).ready(function(){
 			
 	  	}
 	  	this.editCmt = function(item){
-	  		if (item['UserID'] == window.IdAdmin){
+	  		if (item['PostUser'] == window.IdAdmin){
 	  			self.selectCmt(item);	
 	  		}
 	  		
@@ -50,6 +51,8 @@ $(document).ready(function(){
 		this.Content = ko.observable(data.Content || "");
 		this.PostID = ko.observable(data.PostID || "");
 		this.UserID = ko.observable(data.UserID || "");
+		this.PostUser = ko.observable(data.PostUser || "");
+		this.CmtID = ko.observable(data.CmtID || "");
 		
 	}
 
@@ -81,7 +84,7 @@ $(document).ready(function(){
 					index = data["Index"];
 					index = Number(index);
 				
-					var item = {PostID:index,PostTitle:title,Content:message, Email:email, PostUser: PostedID, GivenUser: GivenID, CmtContent: text};
+					var item = {PostID:index,PostTitle:title,Content:message, Email:email,View:0, PostUser: PostedID, GivenUser: GivenID, CmtContent: text};
 					var newPost = new Post(item);
 					console.log(item);
 					self.ListPost.push(newPost);
@@ -127,9 +130,15 @@ $(document).ready(function(){
 	  		var item = post;
 	  		window.location.href = window.baseurl + item.GivenUser();
 	  	}
+	  
 
 	  	this.viewDetail = function(post){
-	  		window.location.href = window.viewUrl + post.PostID();
+
+	  		$.post(window.increaseView,{PostID: post['PostID']},function(data){
+
+	  				window.location.href = window.viewUrl + post.PostID();
+	  		});
+	  	
 	  	}
 	  	
 	  	
@@ -144,13 +153,15 @@ $(document).ready(function(){
 	  		{
 	  			var content = this.CmtContent();
   				var postID = data.PostID();
-  				var userID =  window.IdAdmin;	
+  				var userID =  window.UserID;	
+  				var postUser = window.IdAdmin;
   				
 
   				var item = {
   					Content : content,
   					PostID :postID,
   					UserID : userID,
+  					PostUser: postUser,
   				};
   				
   				$.post(window.insertCmt,{Data: item});

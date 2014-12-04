@@ -40,6 +40,7 @@
 		</div>
 
 		<div id="container">
+
 			<div class="row">
 				<div class="left-panel col-md-4 col-md-push-1">
 					<h2>User information</h2>
@@ -75,6 +76,8 @@
 						var showCmtUrl = '<?php echo base_url()?>' + 'index.php/post/showCommentByPost';
 						var insertCmt = '<?php echo base_url()?>' + 'index.php/post/insertCommentToPost';
 						var dellCmt = '<?php echo base_url()?>' + 'index.php/post/dellComment';
+						var increaseView = '<?php echo base_url()?>' + 'index.php/post/increaseView/';
+						var viewUrl = '<?php echo base_url()?>' + 'index.php/post/viewPostDetail/';
 					</script>
 
 					<script type="text/html" id="editTmpl">
@@ -92,20 +95,21 @@
 					<script type="text/html" id="viewTmpl">
 						<div class="post-item panel-default">
 								<a href="#" id="dellPost" data-bind="click: $root.dellPost">Delete status</a>
-						<a href="#" id="startEdit" data-bind="click: $root.startEdit">Edit</a>
-						<a href="#" id="showCmt" data-bind="click: $root.showCmt">Show Comment</a>
+						<a href="#" id="startEdit" data-bind="click: $root.startEdit">Edit | </a>
+						<a href="#" id="showCmt" data-bind="click: $root.showCmt">Show Comment | </a>
+						<a href="#" id="viewDetail" data-bind="click: $root.viewDetail"> Detail </a>
 						<div class="panel-heading">
-							<div data-bind="text: PostTitle"/>
+							<div class="row">
+								<div class="col-md-1" data-bind="text: PostTitle"/>
+								<strong class="col-md-1">Views:</strong>
+								<div data-bind="text:View"/>
+							</div>
 						</div>
 						<div class="panel-body">
 							<div  data-bind="text: Content"/>
 							<strong>Comments</strong>
-							<div data-bind="foreach: Comments">
-								<div class="row">
-									<div class="col-md-4" data-bind="text: Content"></div>
-									<span  class="dellCmt col-md-4 glyphicon glyphicon-remove" aria-hidden="true" data-bind="click: $parent.delCmt"></span>
-								</div>
-							
+							<div data-bind="template:{ name: templateComment, foreach: Comments}">
+						
 							</div>	
 							<input class="cmtBox" type="text" data-bind="value: CmtContent, valueUpdate: 'afterkeydown', event: { keypress: $root.CmtEvent}">
 						</div>
@@ -113,6 +117,21 @@
 						
 					
 					</script>	
+
+					<script type="text/html" id="viewCmtTmpl">
+						<div class="row">
+						<div class="col-md-2" data-bind="text: Content"></div>
+						<span  class="dellCmt  glyphicon glyphicon-remove" aria-hidden="true" data-bind="click: $parent.delCmt"></span>
+						<span  class="editCmt 	glyphicon glyphicon-edit" aria-hidden="true" data-bind="click: $parent.editCmt"></span>
+						</div>
+					</script>
+
+					<script type="text/html" id="editCmtTmpl">
+						<div class="row">
+							<input class="col-md-push-1 editCmtBox" type="text" data-bind="value:Content, valueUpdate:'afterkeydown',event:{keypress:$parent.CmtEditEnter}">
+							
+						</div>
+					</script>
 				</div>	
 		</div>
 			

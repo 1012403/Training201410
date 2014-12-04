@@ -73,6 +73,7 @@
 			var editCmt = '<?php echo base_url()?>' + 'index.php/post/editComment';
 			var viewUrl = '<?php echo base_url()?>' + 'index.php/post/viewPostDetail/';
 			var dellCmt = '<?php echo base_url()?>' + 'index.php/post/dellComment';
+			var increaseView = '<?php echo base_url()?>' + 'index.php/post/increaseView/';
 		</script>
 
 		<script type="text/html" id="viewTmpl">
@@ -83,11 +84,18 @@
 				<a href="#" id="showCmt" data-bind="click: $root.showCmt"> Show comment </a>
 				<div class="panel-heading">
 					<a href="#" class="emailClick" data-bind="click: $root.emailClick, text: Email"></a>
-					<div data-bind="text: PostTitle"/>
+					<div class="row">
+							<div class="col-md-1" data-bind="text: PostTitle"/>
+							<strong class="col-md-1">Views:</strong>
+							<div data-bind="text:View"/>
+					</div>
+				
+
 				</div>
 				<div class="panel-body" style="margin-top:-15px;">
 					<strong>Content</strong>
 					<div data-bind="text: Content"></div>	
+
 					<strong>Comments</strong>			
 					<div data-bind="template:{ name: templateComment, foreach: Comments}">
 						

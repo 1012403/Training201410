@@ -8,8 +8,10 @@ $(document).ready(function(){
 		this.PostTitle = ko.observable(data.PostTitle || "");
 		this.PostUser = ko.observable(data.PostUser || "");
 		this.GivenUser = ko.observable(data.GivenUser || "");
+		this.View = ko.observable(data.View || "");
 		this.Comments = ko.observableArray(data.Comments || []);
 		this.CmtContent = ko.observable(data.CmtContent || "");
+		this.selectCmt = ko.observable();
 		this.delCmt = function(item){
 			if (confirm("Do you want to delete this comment?") == true){
 				$.post(window.dellCmt,{Data: item['CmtID']});
@@ -17,11 +19,39 @@ $(document).ready(function(){
 	  		}
 
 	  	}
+
+	  		this.editCmt = function(item){
+	  		if (item['PostUser'] == window.IdAdmin){
+	  			self.selectCmt(item);	
+	  		}
+	  		
+	  	}
+	  
+	  	this.templateComment = function(item){
+
+	  		return self.selectCmt() === item ? "editCmtTmpl": "viewCmtTmpl";
+	  	}
+	  	this.CmtEditEnter = function (data, event) { 
+	  		if (event.keyCode == 13) 
+	  		{
+	  		
+  			
+  				 $.post(window.editCmt,{Data: data['Content'], ID: data['CmtID']});
+  			
+  				self.selectCmt(null);
+	  		
+	  		}
+	  		return true;
+	  	
+	  	};
 	}
 
 	function Comment(data){
 		this.Content = ko.observable(data.Content || "");
 		this.PostID = ko.observable(data.PostID || "");
+		this.UserID = ko.observable(data.UserID || "");
+		this.PostUser = ko.observable(data.PostUser || "");
+		this.CmtID = ko.observable(data.CmtID || "");
 		
 	}
 
@@ -51,7 +81,7 @@ $(document).ready(function(){
 					email = data['Email'];
 					index = data["Index"];
 					index = Number(index);
-					var item = {PostID:index,PostTitle:title,Content:message, Email:email, PostUser: PostedID, GivenUser: GivenID, CmtContent: text};
+					var item = {PostID:index,PostTitle:title,Content:message, Email:email,View:0, PostUser: PostedID, GivenUser: GivenID, CmtContent: text};
 					var newPost = new Post(item);
 					console.log(item);
 					self.ListPost.push(newPost);
@@ -96,6 +126,15 @@ $(document).ready(function(){
 	  			item.Comments(JSON.parse(data));
 	  		});
 	  	}
+
+	  	this.viewDetail = function(post){
+	  			
+	  		$.post(window.increaseView,{PostID: post['PostID']},function(data){
+
+	  				window.location.href = window.viewUrl + post.PostID();
+	  		});
+	  	
+	  	}
 	  
 	  	this.CmtEvent = function (data, event) { 
 	  		if (event.keyCode == 13) 
@@ -103,12 +142,13 @@ $(document).ready(function(){
 	  			var content = this.CmtContent();
   				var postID = data.PostID();
   				var userID =  window.IdAdmin;	
-  				
+  				var postUser = window.IdAdmin;
 
   				var item = {
   					Content : content,
   					PostID :postID,
   					UserID : userID,
+  					PostUser: postUser,
   				};
   				
   				$.post(window.insertCmt,{Data: item});

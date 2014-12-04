@@ -103,7 +103,30 @@
 				$this->load->Model('Mpost');
 				$data['title'] = $this->Mpost->getPostTitle($postID);
 				$data['content'] = $this->Mpost->getPostContent($postID);
+				$data['postID'] = $postID;
+				$data['givenUser'] = $this->Mpost->getPostUserID($postID);
 				$this->load->view('detail_view',$data);
+			}
+		}
+
+		public function increaseView(){
+
+			if ($this->my_auth->is_Login()){
+
+				$postID = $_POST['PostID'];
+				$this->load->Model('Mpost');
+				$vote = $this->Mpost->getView($postID);
+				$vote = $vote + 1;
+		
+				$data = array(
+					"View" => $vote,
+					);
+				if ($this->Mpost->updatePost($data,$postID) == true){
+					return true;
+				}
+				else{
+					return false;
+				}
 			}
 		}
 
