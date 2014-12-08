@@ -1,0 +1,115 @@
+.slideshow {
+	margin-bottom: 10px;
+	width:1031px;
+	height:352px;
+	position: relative;
+	text-align:left;
+	overflow:hidden;
+}
+.slideshow .sl_arrow_tl,.slideshow .sl_arrow_tr,.slideshow .sl_arrow_bl,.slideshow .sl_arrow_br {
+	width:10px;
+	height:10px;
+	position:absolute;
+	z-index:99;
+}
+.slideshow .sl_arrow_tl {
+	background:url('../image/bg_slide.png') no-repeat -10px -10px;
+	top:-5px;
+	left:-5px;
+}
+.slideshow .sl_arrow_tr {
+	background:url('../image/bg_slide.png') no-repeat 0 -10px;
+	top:-5px;
+	right:-5px;
+}
+.slideshow .sl_arrow_bl {
+	background:url('../image/bg_slide.png') no-repeat -10px 0;
+	bottom:-5px;
+	left:-5px;
+}
+.slideshow .sl_arrow_br {
+	background:url('../image/bg_slide.png') no-repeat 0 0;
+	bottom:-5px;
+	right:-5px;
+}
+.bx-wrapper{
+	width:100%;
+}
+.slideshow .bx-wrapper{
+	border:1px solid #D8D8D8;
+	width:809px;
+	height:350px;
+}
+.bx-window{
+	margin:0;
+}
+#slider1 {
+	left:0px;
+	padding:0px;
+	margin:0px;
+	width:809px;
+}
+#slider1 li {
+	padding:0px;
+	margin:0px;
+	height:350px;
+}
+#slider1 li img{
+	height:350px;
+	width:809px;
+}
+.bx-pager {
+	position:absolute;
+	right:-221px;
+	top:-1px;
+	width:219px;
+	height:350px;
+	border:1px solid #D8D8D8;
+	border-left:none;
+}
+.bx-pager a.pager-link {
+	display:block;
+	height:87px;
+	border-top:1px solid #D8D8D8;
+	background:#FFF;
+	position:relative;
+	-webkit-transition: background-color 350ms ease 0s;
+	-moz-transition: background-color 350ms ease 0s;
+	-ms-transition: background-color 350ms ease 0s;
+	-o-transition: background-color 350ms ease 0s;
+	transition: background-color 350ms ease 0s;
+}
+.bx-pager a.paper-top {
+	border:none;
+	height:86px;
+}
+.bx-pager a.pager-link.pager-active{
+	background:#D8D8D8;
+}
+.bx-pager a.pager-link.pager-active span.paper-left{
+	position:absolute;
+	top:0;
+	left:-20px;
+	width:20px;
+	height:88px;
+	background: url(../image/paper-left.png) no-repeat center left;
+}
+.bx-pager a.paper-top.pager-link.pager-active span.paper-left{
+	height:87px;
+}
+.bx-pager a.pager-link span.paper-name {
+	font-size:16px;
+	font-weight:normal;
+	color:#000;
+	display:block;
+	padding-left:20px;
+	padding-top:20px;
+}
+.bx-pager a.pager-link span.pager-desc {
+	font-size:12px;
+	font-family:Arial;
+	color:#333;
+	display:block;
+	padding-left:20px;
+	padding-right:20px;
+}

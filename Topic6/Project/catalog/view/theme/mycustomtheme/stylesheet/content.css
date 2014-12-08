@@ -1,0 +1,98 @@
+#container {
+	width: 1051px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+	background:#FFF;
+	position: relative;
+	-moz-box-shadow: 0 0 7px #888;
+	-webkit-box-shadow: 0 0 7px #888;
+	box-shadow: 0 0 7px #888;
+}
+#wrapper {
+	width:1031px;
+	padding:10px;
+}
+#column_right {
+	float: right;
+	width: 220px;
+	margin-left: 9px;
+	clear: right;
+}
+#content {
+	margin-left: 0;
+	margin-right: 230px;
+	margin-bottom: 10px;
+}
+#content.no_right {
+	margin-right:0;
+}
+#content .top {
+	height:37px;
+	display: block;
+	position:relative;
+	background: url(../image/bg_top.png) no-repeat right top;
+}
+#content .top .left {
+	height:38px;
+	width:17px;
+	position:absolute;
+	left:-17px;
+	top:-1px;
+	z-index:2;
+	background: url(../image/bg_top.png) no-repeat left -69px;
+}
+#content .top .center {
+	background: url(../image/bg_top.png) no-repeat right -107px;
+	display: inline-block;
+	padding-right:3px;
+	-webkit-border-radius: 5px 5px 0 0;
+	-moz-border-radius: 5px 5px 0 0;
+	-khtml-border-radius: 5px 5px 0 0;
+	border-radius: 5px 5px 0 0;
+	z-index: 1;
+	position: relative;
+}
+#content .top h1, #content .top h2.h2top {
+	margin-top:5px;
+	line-height:32px;
+	padding-left:10px;
+	padding-right:30px;
+	background: url(../image/bg_top.png) no-repeat right -37px;
+	text-align:left;
+
+}
+#content h1, #content h2.h2top {
+	color: #000;
+	font-size:16px;
+	font-family:'Open Sans Condensed', Arial;
+	font-weight:normal;
+	text-transform:uppercase;
+	margin: 0px;
+}
+.heading {
+	border-bottom: 1px solid #D3D3D3;
+	padding-bottom: 3px;
+	margin-bottom: 10px;
+	margin-top:10px;
+	color: #222;
+	font-size: 16px;
+	font-family:'Open Sans Condensed', Arial;
+	font-weight: normal;
+}
+#content .middle {
+	background: #FFFFFF;
+	min-height: 200px;
+	overflow:hidden;
+	padding:10px;
+	border:1px solid #D8D8D8;
+	border-top:none;
+	-webkit-border-radius: 0 0 5px 5px;
+	-moz-border-radius: 0 0 5px 5px;
+	-khtml-border-radius: 0 0 5px 5px;
+	border-radius: 0 0 5px 5px;
+}
+#content .middle.product {
+	border:none;
+	padding:0;
+}

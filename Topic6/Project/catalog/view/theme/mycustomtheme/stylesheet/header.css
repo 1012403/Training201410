@@ -1,0 +1,315 @@
+@font-face {
+font-family:font_strong;
+src:url('../fonts/OpenSans-CondBold-webfont.ttf') format('truetype'),
+url('../fonts/OpenSans-CondBold-webfont.eot#iefix') format('embedded-opentype'),
+url('../fonts/OpenSans-CondBold-webfont.woff') format('woff');
+font-weight:normal;
+ font-style:normal;
+}
+#taskbar {
+	width:1065px;
+	margin:auto;
+	height:28px;
+}
+.taskbar {
+	height:36px;
+	position:fixed;
+	top:0;
+	width:1065px;
+	z-index:9998;
+	background: url('../image/taskbar.png') top left repeat-x;
+}
+.taskbar_arrow {
+	height:1px;
+	position:fixed;
+	top:0;
+	width:1065px;
+	z-index:1;
+}
+.taskbar_arrow .tbleft {
+	width:7px;
+	height:35px;
+	position:absolute;
+	top:0;
+	left:0px;
+	background: url('../image/tbleft.png') center top no-repeat;
+	z-index:1;
+}
+.taskbar_arrow .tbright{
+	width:7px;
+	height:35px;
+	position:absolute;
+	top:0;
+	right:0px;
+	background: url('../image/tbright.png') center top no-repeat;
+	z-index:1;
+}
+.taskbar .left {
+	float:left;
+	height:28px;
+	margin-left:5px;
+	width:600px;
+}
+.taskbar .right {
+	float:right;
+	height:28px;
+	margin-right:5px;
+	line-height:28px;
+	color:#FFF;
+	font-size:16px;
+	font-family: comic sans ms,cursive;
+}
+.taskbar .right b {
+	color:#ffd700;
+}
+#taskbar .taskbar a.tba{
+	color:#FFF;
+	display:block;
+	padding:0 5px;
+	line-height:28px;
+}
+#taskbar .taskbar .right a.tba{
+
+	padding-left:9px;
+}
+#taskbar .taskbar .left a.tba{
+
+	padding-right:9px;
+}
+#taskbar .taskbar #tbtop.tba {display:none;}
+#taskbar .taskbar a.tba:hover{
+	color:#FFD016;
+}
+.taskbar a.tba.tleft {
+	padding-left:7px !important;
+	background:none !important;
+}
+.taskbar a.tba.tright {
+	padding-left:7px !important;
+	background:none !important;
+}
+.taskbar .left a.tba {
+	float:left;
+}
+.taskbar .left span.tspan, .taskbar .right span.tspan {
+	display:block;
+	width:16px;
+	height:28px;
+	float:left;
+	margin-right:3px;
+	background: url('../image/t-icon.png') no-repeat;
+}
+#taskbar .tshowroom {
+	background-position:-112px center;
+}
+#taskbar .tabout {
+	background-position:-96px center;
+}
+#taskbar .tonline {
+	background-position:-64px center;
+}
+#taskbar .tcontact {
+	background-position:-80px center;
+}
+#taskbar .tlogin {
+	background-position:0px center;
+}
+#taskbar .tcreate {
+	background-position:-32px center;
+}
+#taskbar .tlogout {
+	background-position:-48px center;
+}
+#taskbar .taccount{
+	background-position:-16px center;
+}
+#taskbar .ttop{
+	background-position:-144px center;
+}
+#taskbar .tcategory{
+	background-position:-128px center;
+}
+.taskbar .left a.tba:hover span.tspan, .taskbar .right a.tba:hover span.tspan {
+	background-image: url('../image/t-icon-hover.png');
+}
+.tbsupport, .tbcategory {
+	position:relative;
+	float:left;
+}
+.tbcategory { display:none;}
+.taskbar .tbcategory a.tba {
+	overflow:hidden !important;
+}
+.tbsupport:hover, .tbcategory:hover {
+	background: url('../image/dropw.png') bottom center no-repeat;
+}
+.taskbar .tbsupport:hover a.tba  span.tspan, .taskbar .tbcategory:hover a.tba  span.tspan {
+	background-image: url('../image/t-icon-hover.png');
+}
+.taskbar .tbsupport:hover a.tba, .taskbar .tbcategory:hover a.tba {
+	color:#FFD016 !important;
+}
+#tsupport {
+	width:235px;
+	position:absolute;
+	top:28px;
+	left:-1px;
+	display:none;
+	background:#FFF;
+	padding:10px 0 0;
+	border:1px solid #D8D8D8;
+	border-top:none;
+	-moz-box-shadow: 2px 3px 5px #999;
+	-webkit-box-shadow: 2px 3px 5px #999;
+	box-shadow: 2px 3px 5px #999;
+	-webkit-border-radius: 0 0 5px 5px;
+	-moz-border-radius: 0 0 5px 5px;
+	-khtml-border-radius: 0 0 5px 5px;
+	border-radius: 0 0 5px 5px;
+}
+.tbsupport:hover #tsupport {
+	display:block;
+}
+.support {
+	line-height:20px;
+	width:100%;
+	border-top:1px solid #D8D8D8;
+	border-bottom:1px solid #D8D8D8;
+	background:#F3F3F3;
+	font-weight:bold;
+	text-align:center;
+}
+
+table.hotro {
+	width:200px;
+	color:#333;
+	margin:0 15px 0 20px;
+}
+table.hotro td.tdbottom {
+	padding:2px 5px 7px;
+}
+table.hotro td.tdtop {
+	padding:7px 5px 2px;
+}
+table.hotro td span{font-weight:bold;color:#F00;}
+
+#showuser {
+	float:right;
+}
+.taskbar .right a, #showuser a {
+	float:right;
+}
+#header{
+	width:100%;
+	margin:auto;
+	background:url(../image/bg.png);
+}
+#header .header{
+	width:1031px;
+	margin:0 10px;
+	position:relative;
+	height: 108px;
+	overflow: hidden;
+}
+#header .div0{
+	float:right;
+	width:330px;
+	height:103px;
+	margin-right: 15px;
+	padding-top:5px;
+}
+#header .htitle {
+	font-size: 13px;
+	margin:0;
+	font-family:font_strong, Arial;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+#header .div1 {
+	width: 220px;
+	height:83px;
+	overflow:hidden;
+	margin-left:10px;
+	float:left;
+}
+#header .div1 .logo {
+	margin-top:5px;
+	text-align:left;
+	padding-top:30px;
+}
+#header .div2 {
+    float: left;
+    font-size: 15px;
+    font-weight: normal;
+	text-shadow: 1px 1px 1px #EEE;
+	padding-left:10px;
+	padding-top:15px;
+}
+#header .div2 span {
+	color:#585858;
+	font-family:'Open Sans Condensed', Arial;
+}
+#header .div2 font {
+	color:#000;
+	font-family:'Open Sans Condensed', Arial;
+}
+#header .div2 b {
+	color:#000;
+	font-family:'Open Sans Condensed', Arial;
+}
+.search {
+	margin-top:30px;
+	float:right;
+	height:36px;
+	padding-bottom: 5px;
+/*moz-box-shadow: 0 0 2px 0 #888;
+-webkit-box-shadow: 0 0 2px 0 #888;
+box-shadow: 0 0 2px 0 #888;*/
+}
+.search a.button_search {
+	width:30px;
+	height:34px;
+	float:left;
+	background:#FFF url('../image/icon_search.gif') center right no-repeat;
+	text-decoration: none;
+	color:#FFF;
+	border:1px solid #B3B3B3;
+	border-left:none;
+	font-weight:bold;
+	-webkit-border-radius: 0 3px 3px 0;
+	-moz-border-radius: 0 3px 3px 0;
+	-khtml-border-radius: 0 3px 3px 0;
+	border-radius: 0 3px 3px 0;
+}
+.search input {
+	border:1px solid #B3B3B3;
+	border-right:none;
+	float:left;
+	margin:0px;
+	padding:0px 0 0 5px;
+	height:34px;
+	width:288px;
+	-webkit-border-radius: 3px 0 0 3px;
+	-moz-border-radius: 3px 0 0 3px;
+	-khtml-border-radius: 3px 0 0 3px;
+	border-radius: 3px 0 0 3px;
+}
+#breadcrumb {
+	display:block;
+	height:13px;
+	margin-bottom:10px;
+	position:relative;
+	width:100%;
+	color:#666;
+	overflow: hidden;
+}
+#breadcrumb  ul{ list-style:none; margin:0px; padding:0px;}
+#breadcrumb li{ float:left; margin-right:0px; }
+#breadcrumb a, #breadcrumb span.bcrtitle{ font-size:11px;  padding:0px 6px 0px 6px;}
+#breadcrumb li.bcrhome a {
+	padding-left:0;
+}
+#popup_showroom {
+	width:800px;
+	height:540px;
+}

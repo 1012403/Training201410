@@ -1,0 +1,185 @@
+.menu {
+	background: url('../image/menu.png');
+	width:100%;
+	margin:0px auto 0px;
+	height:43px;
+	position:relative;
+	z-index:999;
+}
+#menu {
+	list-style:none;
+	width:100%;
+	height:38px;
+	padding:0;
+	margin:0;
+	border-bottom:5px solid #e0b500;
+}
+#menu li.mliTop {
+	float:left;
+	display:block;
+	text-align:center;
+	margin:0;
+	padding:0;
+	height:38px;
+	border:none;
+}
+#menu li.mliTop.mliRight { width:115px;float:right;background: url('../image/menu_right.png') right top no-repeat !important;}
+#menu li.mliTop.mliRight.mliNews {background:url('../image/menu_right.png') no-repeat left top !important;}
+#menu li.mliTop.home {width:50px;}
+#menu li.mliTop:hover,#menu li.mliTop.select {
+	background: #E0B500;
+	background-image: -moz-linear-gradient(100% 100% 90deg, #E0B500, #FED116);
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FED116), to(#E0B500));
+}
+#menu li.mliTop a.maTop {
+	font-family:'Open Sans Condensed', Arial;
+	font-size:16px;
+	line-height:38px;
+	color: #000;
+	display:block;
+	font-weight: normal;
+	text-transform: uppercase;
+	outline:0;
+	padding: 0 16px 5px 18px;
+	text-decoration:none;
+	background: url("../image/border.png") no-repeat left top;
+}
+#menu li.mliTop.mliRight a.maTop{
+	color:#FFF; 
+	background: url("../image/border_right.png") no-repeat left top;
+}
+#menu li.mliTop.mliRight.li_news a.maTop{
+	background:none;
+}
+#menu li.mliTop.mliRight:hover a.maTop, #menu li.mliTop.mliRight.select a.maTop{
+	color:#FED116;
+}
+#menu li.mliTop.select a.maTop, #menu li.mliTop:hover a.maTop {
+	color:#FFF;
+}
+#menu li.mliTop.home a.maTop {
+	width:50px;
+	height:38px;
+	background:url("../image/home_menu.png") no-repeat 5px 3px;
+}
+#menu li.mliTop.home:hover a.maTop,#menu li.mliTop.home.select a.maTop {
+	background:url("../image/home_menu.png") no-repeat 5px 3px;
+}
+#menu li.mliTop.home:hover,#menu li.mliTop.home.select {
+	background: #E0B500;
+	background-image: -moz-linear-gradient(100% 100% 90deg, #E0B500, #FED116);
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FED116), to(#E0B500));
+}
+.dropdown {
+	margin:0px auto;
+	position:absolute;
+	left:-999em;
+	text-align:left;
+	padding:0px;
+	width:1041px;
+	height:357px;
+	z-index: 750;
+	border:5px solid #e0b500;
+	background:#FFF;
+	border-top:none;
+	-moz-border-radius: 0px 0px 10px 10px;
+	-webkit-border-radius: 0px 0px 10px 10px;
+	border-radius: 0px 0px 10px 10px;
+}
+#menu li:hover .dropdown {
+	left:0px;
+	top:auto;
+}
+.dropdown .mliImage {
+	position:absolute;
+	bottom:0;
+	right:0;
+	z-index:0;
+}
+.dropdown .mliImage img {
+	display:block;
+	height:357px;
+	-moz-border-radius: 0px 0px 5px 0;
+	-webkit-border-radius: 0px 0px 5px 0;
+	border-radius: 0px 0px 5px 0;
+}
+.dropdown .col_title {
+	padding-top: 15px;
+	padding-left:15px;
+	padding-bottom:5px;
+}
+.dropdown .col_title, .dropdown .col_title a {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:17px;
+	color:#FD7600;
+	font-weight:normal;
+}
+.dropdown .col_1 {
+	display:block;
+	float: left;
+	position: relative;
+	z-index:99;
+	width:130px;
+	overflow:hidden;
+	height:357px;
+	margin-right:30px;
+}
+.dropdown.catid_85 .col_1 {
+	width:135px;
+}
+.dropdown .col_1.m2col {
+	width:160px;
+}
+.dropdown .col_1.muc-gia {
+	width:95px;
+}
+.col_dv {
+	display:block;
+	float: left;
+	position: relative;
+	z-index:99;
+	width:230px;
+	height:357px;
+	overflow:hidden;
+}
+#menu li ul.simple {
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+#menu li ul.simple:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+.simple li {
+	font-size:12px;
+	position:relative;
+	padding:0;
+	margin:0;
+	float:none;
+	text-align:left;
+}
+.col_1.m2col ul.simple {
+	width:160px;
+}
+.col_1.m2col .simple li {
+	float:left;
+	width:80px;
+}
+.simple li a {
+	font-family:Arial, Helvetica, sans-serif;
+	display:block;
+	margin:0px;
+	color:#000;
+	font-size:12px;
+	line-height:27px;
+	text-transform:none;
+	padding-left:15px;
+}
+.simple li:hover a,.simple li.select a {
+	color:#FD7600;
+}
