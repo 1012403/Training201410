@@ -4,7 +4,7 @@
     height: 43px;
     margin: 0 auto;
     position: relative;
-    width: 100%;
+    width: 93%;
     z-index: 999;
 }
 #menu {
@@ -84,7 +84,6 @@
     border-color: -moz-use-text-color #e0b500 #e0b500;
     border-image: none;
     border-radius: 0 0 10px 10px;
-    border-right: 5px solid #e0b500;
     border-style: none solid solid;
     border-width: medium 5px 5px;
     height: 357px;

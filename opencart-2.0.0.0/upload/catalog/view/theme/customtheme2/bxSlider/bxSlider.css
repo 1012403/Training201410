@@ -1,0 +1,118 @@
+
+.slideshow {
+    height: 352px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    text-align: left;
+    width: 1031px;
+}
+.slideshow .sl_arrow_tl, .slideshow .sl_arrow_tr, .slideshow .sl_arrow_bl, .slideshow .sl_arrow_br {
+    height: 10px;
+    position: absolute;
+    width: 10px;
+    z-index: 99;
+}
+.slideshow .sl_arrow_tl {
+    background: url("../image/bg_slide.png") no-repeat scroll -10px -10px rgba(0, 0, 0, 0);
+    left: -5px;
+    top: -5px;
+}
+.slideshow .sl_arrow_tr {
+    background: url("../image/bg_slide.png") no-repeat scroll 0 -10px rgba(0, 0, 0, 0);
+    right: -5px;
+    top: -5px;
+}
+.slideshow .sl_arrow_bl {
+    background: url("../image/bg_slide.png") no-repeat scroll -10px 0 rgba(0, 0, 0, 0);
+    bottom: -5px;
+    left: -5px;
+}
+.slideshow .sl_arrow_br {
+    background: url("../image/bg_slide.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    bottom: -5px;
+    right: -5px;
+}
+.bx-wrapper {
+    width: 100%;
+}
+.slideshow .bx-wrapper {
+    border: 1px solid #d8d8d8;
+    height: 350px;
+    width: 809px;
+}
+.bx-window {
+    margin: 0;
+}
+#slider1 {
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 809px;
+}
+#slider1 li {
+    height: 350px;
+    margin: 0;
+    padding: 0;
+}
+#slider1 li img {
+    height: 350px;
+    width: 809px;
+}
+.bx-pager {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #d8d8d8 #d8d8d8 #d8d8d8 -moz-use-text-color;
+    border-image: none;
+    border-style: solid solid solid none;
+    border-width: 1px 1px 1px medium;
+    height: 350px;
+    position: absolute;
+    right: -221px;
+    top: -1px;
+    width: 219px;
+}
+.bx-pager a.pager-link {
+    background: none repeat scroll 0 0 #fff;
+    border-top: 1px solid #d8d8d8;
+    display: block;
+    height: 87px;
+    position: relative;
+    transition: background-color 350ms ease 0s;
+}
+.bx-pager a.paper-top {
+    border: medium none;
+    height: 86px;
+}
+.bx-pager a.pager-link.pager-active {
+    background: none repeat scroll 0 0 #d8d8d8;
+}
+.bx-pager a.pager-link.pager-active span.paper-left {
+    background: url("../image/paper-left.png") no-repeat scroll left center rgba(0, 0, 0, 0);
+    height: 88px;
+    left: -20px;
+    position: absolute;
+    top: 0;
+    width: 20px;
+}
+.bx-pager a.paper-top.pager-link.pager-active span.paper-left {
+    height: 87px;
+}
+.bx-pager a.pager-link span.paper-name {
+    color: #000;
+    display: block;
+    font-size: 16px;
+    font-weight: normal;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+.bx-pager a.pager-link span.pager-desc {
+    color: #333;
+    display: block;
+    font-family: Arial;
+    font-size: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+}

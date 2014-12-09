@@ -3,6 +3,7 @@
     height: 28px;
     margin: auto;
     width: 1065px;
+    margin-bottom: -20px;
 }
 .taskbar {
     background: url("../image/taskbar.png") repeat-x scroll left top rgba(0, 0, 0, 0);
@@ -153,7 +154,6 @@
     border-color: -moz-use-text-color #d8d8d8 #d8d8d8;
     border-image: none;
     border-radius: 0 0 5px 5px;
-    border-right: 1px solid #d8d8d8;
     border-style: none solid solid;
     border-width: medium 1px 1px;
     box-shadow: 2px 3px 5px #999;
@@ -200,7 +200,7 @@ table.hotro td span {
 #header {
     background: url("../image/bg.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
     margin: auto;
-    width: 100%;
+    width: 93%;
 }
 #header .header {
     height: 108px;

@@ -1,0 +1,280 @@
+
+#footer {
+    background: url("../image/bg.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    clear: both;
+    color: #000;
+    font-size: 12px;
+    margin: auto;
+    position: relative;
+    width: 1051px;
+    z-index: 99;
+}
+#footer .div0 {
+    text-align: left;
+    width: 100%;
+}
+#footer .menufooter h3 a {
+    color: orange;
+}
+#footer .f_top {
+    height: 32px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+}
+#footer span.f_top_name {
+    color: #000;
+    font-family: "Open Sans Condensed",Arial;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 32px;
+    margin: 0;
+}
+#footer .div0 .f_info {
+    float: left;
+    margin-left: 10px;
+    width: 337px;
+}
+.f_info .f_middle {
+    background: none repeat scroll 0 0 #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 3px #999;
+    height: 180px;
+    position: relative;
+    width: 337px;
+}
+.f_info .f_middle #news {
+    padding: 5px;
+}
+#footer .div0 .f_video {
+    float: left;
+    margin-left: 10px;
+    width: 337px;
+}
+#videosp {
+    height: 180px;
+    margin: 0;
+    padding: 0;
+}
+#videosp li {
+    position: relative;
+}
+.f_video .f_middle {
+    height: 180px;
+    position: relative;
+    width: 337px;
+}
+.f_video .f_middle .bx-window {
+    border-radius: 5px;
+    box-shadow: 0 0 3px #999;
+}
+.f_video .f_middle a.colorbox {
+    display: block;
+    height: 180px;
+    width: 337px;
+}
+.f_video .f_middle .vsimage {
+    width: 337px;
+}
+.f_video .f_middle .vsimage img {
+    width: 337px;
+    margin-top: -6%;
+}
+.f_video .f_middle .vsname {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
+    bottom: 0;
+    color: #ddd;
+    display: block;
+    font-weight: bold;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 10px;
+    position: absolute;
+    width: 363px;
+    margin-bottom: 5%;
+    margin-left:-5%;
+}
+.f_video .f_middle .vsname:hover {
+    color: #fff;
+}
+.f_video .f_middle .vsplay {
+    background: url("../image/play.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 39px;
+    left: 156px;
+    position: absolute;
+    top: 70px;
+    width: 58px;
+}
+#videosp li:hover .vsplay {
+    background: url("../image/play_hover.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.f_video .bx-prev {
+    background: url("../image/bprev4.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 22px;
+    left: 108px;
+    position: absolute;
+    text-indent: -999999px;
+    top: -37px;
+    width: 15px;
+}
+.f_video .bx-next {
+    background: url("../image/bnext4.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 22px;
+    left: 128px;
+    position: absolute;
+    text-indent: -999999px;
+    top: -37px;
+    width: 15px;
+}
+.f_video .bx-next.hide {
+    background: url("../image/bnext.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+    cursor: default;
+}
+.f_video .bx-prev.hide {
+    background: url("../image/bprev.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+    cursor: default;
+}
+.f_video .bx-prev:hover {
+    background: url("../image/bprev2.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.f_video .bx-next:hover {
+    background: url("../image/bnext2.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+#footer .div0 .f_showroom {
+    float: right;
+    margin-right: 10px;
+    width: 337px;
+}
+.footer_sr {
+    background: none repeat scroll 0 0 #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #999;
+    font-size: 12px;
+    height: 65px;
+    margin: 0 0 10px;
+    overflow: hidden;
+    padding: 10px;
+    position: relative;
+}
+.footer_sr.fbottom {
+    height: 36px;
+}
+.footer_sr .map_contact {
+    background: url("../image/maps-icon.png") no-repeat scroll left center rgba(0, 0, 0, 0);
+    color: #666;
+    display: block;
+    padding-left: 72px;
+}
+.footer_sr .info_contact {
+    height: 65px;
+    width: 110%;
+}
+.content .footer_sr {
+    float: left;
+    width: 338px;
+}
+.info_contact p {
+    margin-bottom: 5px;
+}
+.info_contact p.chinhanh {
+    padding-top: 4px;
+}
+.info_contact p.chinhanh font {
+    color: #fd7602;
+    font-weight: bold;
+}
+.info_contact p span.telephone, .info_contact p.diachi font {
+    color: #000;
+    font-weight: bold;
+}
+.view_map {
+    border-radius: 5px;
+    display: block;
+    height: 85px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.footer_sr.fbottom .view_map {
+    height: 85px;
+}
+.footer_sr .view_map a {
+    display: none;
+}
+.footer_sr:hover .view_map {
+    background: none repeat scroll 0 0 rgba(51, 51, 51, 0.5);
+    transition: background-color 0.3s ease 0s;
+}
+.footer_sr:hover .view_map a {
+    color: #fff;
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 85px;
+    text-align: center;
+}
+#footer .div1 {
+    background: url("../image/footer_bottom.png") no-repeat scroll center top rgba(0, 0, 0, 0);
+    height: 20px;
+    padding-bottom: 25px;
+    padding-top: 15px;
+    text-align: left;
+}
+#footer .div1 a {
+    color: #555;
+}
+#footer .div1 a:hover {
+    color: #fd7602;
+}
+#footer .powered {
+    color: #333;
+    float: right;
+    line-height: 25px;
+    padding-right: 10px;
+    text-align: right;
+}
+#footer .menufooter {
+    float: left;
+    text-align: left;
+}
+#footer .menufooter a {
+    background: url("../image/mf_border.png") no-repeat scroll right center rgba(0, 0, 0, 0);
+    line-height: 25px;
+    padding: 0 12px 0 10px;
+}
+#footer .menufooter a.right {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    padding-right: 10px;
+}
+.facebook_box {
+    background: none repeat scroll 0 0 #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #999;
+    height: 212px;
+    margin: 0 10px 15px;
+    overflow: hidden;
+}
+.ftotop {
+    bottom: -1px;
+    height: 1px;
+    position: fixed;
+    width: 1051px;
+}
+#tbtop {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: url("../image/arrow-up-black.png") no-repeat scroll center center #fff;
+    border-color: #000 #000 -moz-use-text-color;
+    border-image: none;
+    border-radius: 3px 3px 0 0;
+    border-style: solid solid none;
+    border-width: 1px 1px medium;
+    bottom: 0;
+    display: block;
+    height: 39px;
+    position: absolute;
+    right: -96px;
+    width: 39px;
+}

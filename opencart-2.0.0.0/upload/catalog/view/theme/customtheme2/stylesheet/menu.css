@@ -1,0 +1,193 @@
+
+.menu {
+    background: url("../image/menu.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 43px;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    z-index: 999;
+}
+#menu {
+    border-bottom: 5px solid #e0b500;
+    height: 38px;
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+#menu li.mliTop {
+    border: medium none;
+    display: block;
+    float: left;
+    height: 38px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+#menu li.mliTop.mliRight {
+    background: url("../image/menu_right.png") no-repeat scroll right top rgba(0, 0, 0, 0) !important;
+    float: right;
+    width: 115px;
+}
+#menu li.mliTop.mliRight.mliNews {
+    background: url("../image/menu_right.png") no-repeat scroll left top rgba(0, 0, 0, 0) !important;
+}
+#menu li.mliTop.home {
+    width: 50px;
+}
+#menu li.mliTop:hover, #menu li.mliTop.select {
+    background: -moz-linear-gradient(100% 100% 90deg, #e0b500, #fed116) repeat scroll 0 0 #e0b500;
+}
+#menu li.mliTop a.maTop {
+    background: url("../image/border.png") no-repeat scroll left top rgba(0, 0, 0, 0);
+    color: #000;
+    display: block;
+    font-family: "Open Sans Condensed",Arial;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 38px;
+    outline: 0 none;
+    padding: 0 16px 5px 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+#menu li.mliTop.mliRight a.maTop {
+    background: url("../image/border_right.png") no-repeat scroll left top rgba(0, 0, 0, 0);
+    color: #fff;
+}
+#menu li.mliTop.mliRight.li_news a.maTop {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+#menu li.mliTop.mliRight:hover a.maTop, #menu li.mliTop.mliRight.select a.maTop {
+    color: #fed116;
+}
+#menu li.mliTop.select a.maTop, #menu li.mliTop:hover a.maTop {
+    color: #fff;
+}
+#menu li.mliTop.home a.maTop {
+    background: url("../image/home_menu.png") no-repeat scroll 5px 3px rgba(0, 0, 0, 0);
+    height: 38px;
+    width: 50px;
+}
+#menu li.mliTop.home:hover a.maTop, #menu li.mliTop.home.select a.maTop {
+    background: url("../image/home_menu.png") no-repeat scroll 5px 3px rgba(0, 0, 0, 0);
+}
+#menu li.mliTop.home:hover, #menu li.mliTop.home.select {
+    background: -moz-linear-gradient(100% 100% 90deg, #e0b500, #fed116) repeat scroll 0 0 #e0b500;
+}
+.dropdown {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 #fff;
+    border-color: -moz-use-text-color #e0b500 #e0b500;
+    border-image: none;
+    border-radius: 0 0 10px 10px;
+    border-right: 5px solid #e0b500;
+    border-style: none solid solid;
+    border-width: medium 5px 5px;
+    height: 357px;
+    left: -999em;
+    margin: 0 auto;
+    padding: 0;
+    position: absolute;
+    text-align: left;
+    width: 1041px;
+    z-index: 750;
+}
+#menu li:hover .dropdown {
+    left: 0;
+    top: auto;
+}
+.dropdown .mliImage {
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    z-index: 0;
+}
+.dropdown .mliImage img {
+    border-radius: 0 0 5px;
+    display: block;
+    height: 357px;
+}
+.dropdown .col_title {
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-top: 15px;
+}
+.dropdown .col_title, .dropdown .col_title a {
+    color: #fd7600;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 17px;
+    font-weight: normal;
+}
+.dropdown .col_1 {
+    display: block;
+    float: left;
+    height: 357px;
+    margin-right: 30px;
+    overflow: hidden;
+    position: relative;
+    width: 130px;
+    z-index: 99;
+}
+.dropdown.catid_85 .col_1 {
+    width: 135px;
+}
+.dropdown .col_1.m2col {
+    width: 160px;
+}
+.dropdown .col_1.muc-gia {
+    width: 95px;
+}
+.col_dv {
+    display: block;
+    float: left;
+    height: 357px;
+    overflow: hidden;
+    position: relative;
+    width: 230px;
+    z-index: 99;
+}
+#menu li ul.simple {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+#menu li ul.simple:after {
+    clear: both;
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
+.simple li {
+    float: none;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-align: left;
+}
+.col_1.m2col ul.simple {
+    width: 160px;
+}
+.col_1.m2col .simple li {
+    float: left;
+    width: 80px;
+}
+.simple li a {
+    color: #000;
+    display: block;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    line-height: 27px;
+    margin: 0;
+    padding-left: 15px;
+    text-transform: none;
+}
+.simple li:hover a, .simple li.select a {
+    color: #fd7600;
+}

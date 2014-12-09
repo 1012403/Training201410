@@ -1,0 +1,97 @@
+
+#container {
+    background: none repeat scroll 0 0 #fff;
+    box-shadow: 0 0 7px #888;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    text-align: left;
+    width: 1051px;
+}
+#wrapper {
+    padding: 10px;
+    width: 1031px;
+}
+#column_right {
+    clear: right;
+    float: right;
+    margin-left: 9px;
+    width: 220px;
+}
+#content {
+    margin-bottom: 10px;
+    margin-left: 0;
+    margin-right: 230px;
+}
+#content.no_right {
+    margin-right: 0;
+}
+#content .top {
+    background: url("../image/bg_top.png") no-repeat scroll right top rgba(0, 0, 0, 0);
+    display: block;
+    height: 37px;
+    position: relative;
+}
+#content .top .left {
+    background: url("../image/bg_top.png") no-repeat scroll left -69px rgba(0, 0, 0, 0);
+    height: 38px;
+    left: -17px;
+    position: absolute;
+    top: -1px;
+    width: 17px;
+    z-index: 2;
+}
+#content .top .center {
+    background: url("../image/bg_top.png") no-repeat scroll right -107px rgba(0, 0, 0, 0);
+    border-radius: 5px 5px 0 0;
+    display: inline-block;
+    padding-right: 3px;
+    position: relative;
+    z-index: 1;
+}
+#content .top h1, #content .top h2.h2top {
+    background: url("../image/bg_top.png") no-repeat scroll right -37px rgba(0, 0, 0, 0);
+    line-height: 32px;
+    margin-top: 5px;
+    padding-left: 10px;
+    padding-right: 30px;
+    text-align: left;
+}
+#content h1, #content h2.h2top {
+    color: #000;
+    font-family: "Open Sans Condensed",Arial;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0;
+    text-transform: uppercase;
+}
+.heading {
+    border-bottom: 1px solid #d3d3d3;
+    color: #222;
+    font-family: "Open Sans Condensed",Arial;
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding-bottom: 3px;
+}
+#content .middle {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 #ffffff;
+    border-color: -moz-use-text-color #d8d8d8 #d8d8d8;
+    border-image: none;
+    border-radius: 0 0 5px 5px;
+    border-right: 1px solid #d8d8d8;
+    border-style: none solid solid;
+    border-width: medium 1px 1px;
+    min-height: 200px;
+    overflow: hidden;
+    padding: 10px;
+}
+#content .middle.product {
+    border: medium none;
+    padding: 0;
+}

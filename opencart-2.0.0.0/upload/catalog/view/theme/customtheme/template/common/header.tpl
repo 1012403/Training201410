@@ -33,9 +33,11 @@
 	<link href="catalog/view/theme/customtheme/stylesheet/cart.css" rel="stylesheet">
 	<link href="catalog/view/theme/customtheme/stylesheet/header.css" rel="stylesheet">
 	<link href="catalog/view/theme/customtheme/stylesheet/sidebar.css" rel="stylesheet">
-
+	<link href="catalog/view/theme/customtheme/stylesheet/home.css" rel="stylesheet">
+	<link href="catalog/view/theme/customtheme/stylesheet/content.css" rel="stylesheet">
 	<link href="catalog/view/theme/customtheme/bxSlider/bxSlider.css" rel="stylesheet">
-
+	<link href="catalog/view/theme/customtheme/stylesheet/listproduct.css" rel="stylesheet">
+	<link href="catalog/view/theme/customtheme/stylesheet/footer.css" rel="stylesheet">
 	/*<!-- <script src="catalog/view/javascript/jquery/colorbox/jquery.colorbox.js" type="text/javascript"></script> -->*/
 	<script src="catalog/view/javascript/bxSlider.js" type="text/javascript"></script>
 	<script src="catalog/view/javascript/jquery.bxSlider.js" type="text/javascript"></script>
@@ -58,7 +60,7 @@
 			<div class="left">
 				<a class="tba" href="http://2tmobile.com/info/about/"><span class="tspan tabout"></span>Giới thiệu</a>
 				<a class="tba hethongcuahang cboxElement" onclick="http://2tmobile.com/info/showroom/"><span class="tspan tshowroom"></span>Hệ thống cửa hàng</a>
-			
+
 				<a class="tba tright" href="http://2tmobile.com/info/contact/"><span class="tspan tcontact"></span>Liên hệ</a>
 			</div>
 			<div class="right">
@@ -100,7 +102,6 @@
 	
 	<?php if ($categories) { ?>
 	<div class="container">
-
 		<nav class="menu" >
 			<ul id="menu">
 				<li class="mliTop home select active">
